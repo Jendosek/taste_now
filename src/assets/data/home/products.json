@@ -1,0 +1,146 @@
+[
+    {
+        "id": "p1",
+        "category": "pizzas",
+        "title": "Pepperoni Pizza",
+        "description": "Di napoles",
+        "price": 11.99,
+        "rating": 5,
+        "imageUrl": "/products/pepperoni_pizza.png"
+    },
+    {
+        "id": "p2",
+        "category": "pizzas",
+        "title": "Meat Pizza",
+        "description": "Di napoles",
+        "price": 13.99,
+        "rating": 4.5,
+        "imageUrl": "/products/meat_pizza.png"
+    },
+    {
+        "id": "p3",
+        "category": "pizzas",
+        "title": "Vegetarian Pizza",
+        "description": "Cosa di Mario",
+        "price": 12.99,
+        "rating": 4.3,
+        "imageUrl": "/products/vegetarian_pizza.png"
+    },
+    {
+        "id": "p4",
+        "category": "pizzas",
+        "title": "Mediterranean Pizza",
+        "description": "Milano",
+        "price": 15.99,
+        "rating": 4.0,
+        "imageUrl": "/products/mediterranean_pizza.png"
+    },
+    {
+        "id": "b1",
+        "category": "burgers",
+        "title": "Cheese Burger",
+        "description": "Classic Beef",
+        "price": 8.99,
+        "rating": 4.8,
+        "imageUrl": "/products/burger.png"
+    },
+    {
+        "id": "b2",
+        "category": "burgers",
+        "title": "Bacon Burger",
+        "description": "With Crispy Bacon",
+        "price": 9.99,
+        "rating": 4.6,
+        "imageUrl": "/products/burger.png"
+    },
+    {
+        "id": "b3",
+        "category": "burgers",
+        "title": "Mushroom Burger",
+        "description": "With Sautéed Mushrooms",
+        "price": 10.49,
+        "rating": 4.4,
+        "imageUrl": "/products/burger.png"
+    },
+    {
+        "id": "b4",
+        "category": "burgers",
+        "title": "Meat Burger",
+        "description": "Double Beef Patty",
+        "price": 11.99,
+        "rating": 4.2,
+        "imageUrl": "/products/burger.png"
+    },
+    {
+        "id": "s1",
+        "category": "salads",
+        "title": "Ceasar Salad",
+        "description": "With Grilled Chicken",
+        "price": 9.99,
+        "rating": 4.8,
+        "imageUrl": "/products/salad.png"
+    },
+    {
+        "id": "s2",
+        "category": "salads",
+        "title": "Greek Salad",
+        "description": "With Feta Cheese",
+        "price": 8.99,
+        "rating": 4.5,
+        "imageUrl": "/products/salad.png"
+    },
+    {
+        "id": "s3",
+        "category": "salads",
+        "title": "Garden Salad",
+        "description": "Fresh Vegetables",
+        "price": 7.99,
+        "rating": 4.3,
+        "imageUrl": "/products/salad.png"
+    },
+    {
+        "id": "s4",
+        "category": "salads",
+        "title": "Cobb Salad",
+        "description": "With Avocado and Bacon",
+        "price": 10.49,
+        "rating": 4.1,
+        "imageUrl": "/products/salad.png"
+    },
+    {
+        "id": "c1",
+        "category": "combos",
+        "title": "Family Combo",
+        "description": "2 Pizzas, 4 Burgers, 2 Salads",
+        "price": 49.99,
+        "rating": 4.9,
+        "imageUrl": "/products/combos.png"
+    },
+    {
+        "id": "c2",
+        "category": "combos",
+        "title": "Couple's Combo",
+        "description": "1 Pizza, 2 Burgers, 1 Salad",
+        "price": 29.99,
+        "rating": 4.7,
+        "imageUrl": "/products/combos.png"
+    },
+    {
+        "id": "c3",
+        "category": "combos",
+        "title": "Party Combo",
+        "description": "3 Pizzas, 6 Burgers, 3 Salads",
+        "price": 69.99,
+        "rating": 4.6,
+        "imageUrl": "/products/combos.png"
+    },
+    {
+        "id": "c4",
+        "category": "combos",
+        "title": "Lunch Combo",
+        "description": "1 Burger, 1 Salad, Drink",
+        "price": 14.99,
+        "rating": 4.4,
+        "imageUrl": "/products/combos.png"
+    }
+]
