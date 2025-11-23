@@ -3,7 +3,6 @@
     margin: 0 auto;
     padding: 40px 20px;
     min-height: 80vh;
-    /* Щоб футер не прилипав до верху, якщо кошик порожній */
 }
 
 .cart-header {
@@ -32,24 +31,19 @@
     color: #333;
 }
 
-/* --- Головний контейнер (Сітка) --- */
 .cart-container {
     display: flex;
     gap: 40px;
     align-items: flex-start;
-    /* Щоб права колонка не розтягувалася на всю висоту */
 }
 
-/* --- Ліва частина: Список --- */
 .cart-items-list {
     flex: 2;
-    /* Займає 2/3 ширини */
 }
 
 .cart-labels {
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 1fr;
-    /* Пропорції колонок */
     color: #999;
     font-size: 12px;
     font-weight: 600;
@@ -107,7 +101,6 @@
     color: #333;
 }
 
-/* Кнопки + та - */
 .item-quantity {
     display: flex;
     align-items: center;
@@ -136,10 +129,8 @@
     text-align: center;
 }
 
-/* --- Права частина: Підсумок --- */
 .cart-summary {
     flex: 1;
-    /* Займає 1/3 ширини */
     background: #f9f9f9;
     padding: 30px;
     border-radius: 16px;
@@ -169,25 +160,28 @@
 }
 
 .btn-checkout {
-    display: block;
-    width: 100%;
     background-color: #F72D57;
-    /* Твій фірмовий колір */
-    color: white;
-    text-align: center;
-    padding: 15px;
+    color: #fff;
+    border: none;
     border-radius: 8px;
-    text-decoration: none;
+    padding: 15px;
+    width: 100%;
     font-weight: 600;
-    margin-top: 30px;
-    transition: background 0.3s;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.link-checkout {
+    text-decoration: none;
+    color: #fff
 }
 
 .btn-checkout:hover {
     background-color: #d11a40;
 }
 
-/* --- Порожній кошик --- */
 .cart-empty {
     text-align: center;
     padding: 100px 0;
@@ -196,6 +190,10 @@
 .cart-empty h2 {
     font-size: 32px;
     margin-bottom: 20px;
+}
+
+.cart-empty p {
+    color: #555;
 }
 
 .btn-back {
@@ -215,17 +213,17 @@
 }
 
 .btn-clear {
-  background-color: transparent;
-  border: 2px solid #F72D57; /* Лише рамка */
-  color: #F72D57; /* Червоний текст */
-  border-radius: 8px;
-  padding: 15px;
-  width: 100%;
-  font-weight: 600;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 15px;
-  transition: all 0.3s ease;
+    background-color: transparent;
+    border: 2px solid #F72D57;
+    color: #F72D57;
+    border-radius: 8px;
+    padding: 15px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s ease;
 }
 
 .btn-clear:hover {

@@ -1,20 +1,16 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { addItem, removeItem, clearCart } from '../../features/cartSlice';
 
 import './style.css';
 
 const Cart = () => {
-    // --- ЛОГІКА ---
-
-    // Дістаємо масив товарів та загальну суму зі сховища
     const { items, totalPrice } = useSelector((state) => state.cart);
 
-    // Отримуємо функцію для відправки команд
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
-    // Функції-обгортки для кнопок + та -
     const handleAdd = (item) => {
         dispatch(addItem(item));
     };
@@ -27,22 +23,23 @@ const Cart = () => {
         dispatch(clearCart());
     };
 
-    // --- ВІДОБРАЖЕННЯ (JSX) ---
+    const handleCheckout = () => {
+        dispatch(clearCart());
+        navigate('/success');
+    };
 
-    // Варіант 1: Якщо кошик порожній
     if (items.length === 0) {
         return (
             <div className="cart-empty">
                 <h2>Your Cart is empty</h2>
                 <p>Looks like you haven't added any delicious food yet.</p>
                 <Link to="/" className="btn-back">
-                    Go back to Menu
+                    Go back to Home
                 </Link>
             </div>
         );
     }
 
-    // Варіант 2: Якщо є товари
     return (
         <div className="cart-page">
             <div className="cart-header">
@@ -53,7 +50,6 @@ const Cart = () => {
             </div>
 
             <div className="cart-container">
-                {/* ЛІВА ЧАСТИНА: Список товарів */}
                 <div className="cart-items-list">
                     <div className="cart-labels">
                         <span>Product</span>
@@ -64,7 +60,6 @@ const Cart = () => {
 
                     {items.map((item) => (
                         <div key={item.id} className="cart-item">
-                            {/* Картинка і Опис */}
                             <div className="item-info">
                                 <img src={item.imageUrl} alt={item.title} />
                                 <div className="item-details">
@@ -74,19 +69,16 @@ const Cart = () => {
                                 </div>
                             </div>
 
-                            {/* Ціна за одиницю */}
                             <div className="item-price">
                                 ${item.price}
                             </div>
 
-                            {/* Керування кількістю */}
                             <div className="item-quantity">
                                 <button onClick={() => handleRemove(item.id)}>-</button>
                                 <span>{item.quantity}</span>
                                 <button onClick={() => handleAdd(item)}>+</button>
                             </div>
 
-                            {/* Сума за цей рядок */}
                             <div className="item-total">
                                 ${item.totalPrice.toFixed(2)}
                             </div>
@@ -94,7 +86,6 @@ const Cart = () => {
                     ))}
                 </div>
 
-                {/* ПРАВА ЧАСТИНА (або нижня): Загальний підсумок */}
                 <div className="cart-summary">
                     <h3>Order Summary</h3>
                     <div className="summary-row">
@@ -110,10 +101,12 @@ const Cart = () => {
                         <span>${totalPrice.toFixed(2)}</span>
                     </div>
 
-                    {/* Кнопка переходу на заглушку "Успіх" */}
-                    <Link to="/success" className="btn-checkout">
-                        Checkout
-                    </Link>
+                    <button onClick={handleCheckout} className="btn-checkout">
+                        <Link to="/success" className='link-checkout'>
+                            Checkout
+                        </Link>
+                    </button>
+
 
                     <button className="btn-clear" onClick={handleClearCart}>
                         Clear Cart

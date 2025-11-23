@@ -1,0 +1,49 @@
+.work-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    gap: 140px;
+    margin-top: 90px;
+    margin-bottom: 160px;
+}
+
+.img-container {
+    width: 500px;
+    height: 400px;
+}
+
+.work-text .highlight {
+    color: #F72D57;
+}
+
+.work-text h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #333;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.work-text p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+    margin-top: 25px;
+}
+
+.btn-join {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #F72D57;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-join:hover {
+    background-color: #d11a40;
+}
