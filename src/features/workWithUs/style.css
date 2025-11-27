@@ -1,0 +1,143 @@
+.work-section {
+    padding: 20px 100px;
+    text-align: center;
+    margin-top: 42px;
+    margin-bottom: 90px;
+    
+}
+
+.work-header h2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.work-header .highlight {
+    color: #F72D57;
+}
+
+.work-swiper {
+    padding: 40px 10px;
+}
+
+.work-card {
+    display: block;
+    width: 392px;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 361px;
+}
+
+.work-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: scale(1.05);
+}
+
+.card-arrow {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-right: 1px solid #F72D57;
+    border-top: 1px solid #F72D57;
+    transform: rotate(45deg);
+    margin-left: 12px;
+    transition: transform 0.3s ease;
+}
+
+.work-card:hover .card-arrow {
+    transform: rotate(45deg) translate(2px, -2px);
+}
+
+.work-image img {
+    display: block;
+    height: 292px;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.work-info {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    height: 69px;
+}
+
+.work-info p {
+    font-size: 17px;
+    color: #F72D57;
+    margin: 0;
+}
+
+.swiper-pagination {
+    display: none;
+}
+
+.work-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-arrow {
+    background: none;
+    border: none; 
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.nav-arrow::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    box-shadow: -3px 3px 0 #F54748; 
+    transform: rotate(45deg);
+    border-radius: 2px;
+}
+
+.nav-arrow.next::before {
+    transform: rotate(-135deg);
+    margin-left: -5px;
+}
+
+.nav-arrow.prev::before {
+    margin-right: -5px;
+}
+
+.nav-arrow:hover {
+    transform: scale(1.1);
+}
+
+.slider-pagination {
+    display: flex;
+    gap: 10px;
+}
+
+.pagination-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-dot.active {
+    background-color: #F72D57;
+    transform: scale(1.2);
+}
+
+.pagination-dot:hover {
+    background-color: #ff8ba4;
+}

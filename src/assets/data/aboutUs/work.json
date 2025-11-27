@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Software and services",
+    "image": "/workWithUs/software_and_services.png",
+    "link": "/contact"
+  },
+  {
+    "id": 2,
+    "title": "Hardware",
+    "image": "/workWithUs/hardware.png",
+    "link": "/contact"
+  },
+  {
+    "id": 3,
+    "title": "Human resources",
+    "image": "/workWithUs/human_resources.png",
+    "link": "/contact"
+  },
+  {
+    "id": 4,
+    "title": "Development",
+    "image": "/workWithUs/development.png",
+    "link": "/contact"
+  }
+]

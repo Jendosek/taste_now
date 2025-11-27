@@ -1,0 +1,125 @@
+.getKnowAboutUs-section {
+    padding: 0 100px;
+    max-width: 1470px;
+}
+
+.getKnowAboutUs-title {
+    font-size: 48px;
+    font-weight: 600;
+    margin: 0;
+    margin-top: 80px;
+    color: #333;
+}
+
+.highlight {
+    color: #F72D57;
+}
+
+.teamwork-container img,
+.enviroment-container img,
+.employees-container img {
+    width: 580px;
+    height: 380px;
+}
+
+.teamwork-container {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.teamwork-container-text {
+    width: 600px;
+}
+
+.teamwork-container-text h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #333;
+    width: 470px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.teamwork-container-text p {
+    font-size: 16px;
+    font-weight: 400;
+    width: 520px;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.enviroment-container {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.enviroment-container-text {
+    width: 600px;
+}
+
+.enviroment-container-text h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #333;
+    width: 470px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.enviroment-container-text p {
+    font-size: 16px;
+    font-weight: 400;
+    width: 570px;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.employees-container {
+    margin-top: 120px;
+    background-color: #F72D57;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 70px 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.employees-container-text {
+    width: 600px;
+}
+
+.employees-container-text h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #ffffff;
+    width: 500px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.employees-container-text p {
+    font-size: 16px;
+    font-weight: 400;
+    width: 520px;
+    color: #ffffff;
+    line-height: 1.5;
+    margin: 0;
+    margin-top: 20px;
+}
