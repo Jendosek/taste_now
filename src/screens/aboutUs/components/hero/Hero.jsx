@@ -4,7 +4,7 @@ import heroImage from '../../../../assets/img/aboutUs/images/hero_image.png';
 
 const Hero = () => {
     return (
-        <section className="hero-section">
+        <section className="hero-section-about">
             <div className="hero-text">
                 <h1>
                     We deliver for you to <span className="highlight">enjoy</span>

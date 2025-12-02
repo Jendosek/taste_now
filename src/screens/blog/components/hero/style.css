@@ -1,0 +1,47 @@
+.hero-section-blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 100px;
+    margin-top: 130px; 
+}
+
+.highlight {
+    color: #F72D57;
+}
+
+.hero-section-blog h1 {
+    text-align: center;
+    width: 614px;
+    font-size: 52px;
+    font-weight: 700;
+    color: #3f3f3f;
+    margin-bottom: 25px;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.hero-section-blog p {
+    text-align: center;
+    width: 547px;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+    margin-top: 24px;
+}
+
+.btn-blog {
+    margin-top: 34px;
+    display: inline-block;
+    padding: 14px 36px;
+    background-color: #F72D57;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-blog:hover {
+    background-color: #d0264a;
+}

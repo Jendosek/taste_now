@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Get to know us",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pellentesque massa at magna sodales molestie. Phasellus sit amet pretium felis. Curabitur consectetur dui diam. Aliquam aliquet consequat quam ut finibus. Vivamus efficitur facilisis facilisis. Maecenas quis sollicitudin nisi. Fusce vehicula ipsum ante, sed vestibulum augue malesuada id. Cras eget orci eget neque luctus bibendum nec sodales mauris. Maecenas euismod elit ut nibh rutrum, at tempus sapien fermentum.",
+    "image": "/blogs/blog1.png",
+    "category": "Company"
+  },
+  {
+    "id": 2,
+    "title": "Working outdoors",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pellentesque massa at magna sodales molestie. Phasellus sit amet pretium felis. Curabitur consectetur dui diam. Aliquam aliquet consequat quam ut finibus. Vivamus efficitur facilisis facilisis. Maecenas quis sollicitudin nisi. Fusce vehicula ipsum ante, sed vestibulum augue malesuada id. Cras eget orci eget neque luctus bibendum nec sodales mauris. Maecenas euismod elit ut nibh rutrum, at tempus sapien fermentum.",
+    "image": "/blogs/blog2.png",
+    "category": "Lifestyle"
+  },
+  {
+    "id": 3,
+    "title": "Follow today’s movement",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pellentesque massa at magna sodales molestie. Phasellus sit amet pretium felis. Curabitur consectetur dui diam. Aliquam aliquet consequat quam ut finibus. Vivamus efficitur facilisis facilisis. Maecenas quis sollicitudin nisi. Fusce vehicula ipsum ante, sed vestibulum augue malesuada id. Cras eget orci eget neque luctus bibendum nec sodales mauris. Maecenas euismod elit ut nibh rutrum, at tempus sapien fermentum.",
+    "image": "/blogs/blog3.png",
+    "category": "News"
+  },
+  {
+    "id": 4,
+    "title": "Stay motivated at work",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pellentesque massa at magna sodales molestie. Phasellus sit amet pretium felis. Curabitur consectetur dui diam. Aliquam aliquet consequat quam ut finibus. Vivamus efficitur facilisis facilisis. Maecenas quis sollicitudin nisi. Fusce vehicula ipsum ante, sed vestibulum augue malesuada id. Cras eget orci eget neque luctus bibendum nec sodales mauris. Maecenas euismod elit ut nibh rutrum, at tempus sapien fermentum.",
+    "image": "/blogs/blog4.png",
+    "category": "Productivity"
+  }
+]

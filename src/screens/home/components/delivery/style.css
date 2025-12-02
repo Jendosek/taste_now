@@ -27,21 +27,6 @@
     margin-top: 25px;
 }
 
-.delivery-text button {
-    background-color: #F72D57;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 12px 30px; 
-    width: 100%;
-    font-weight: 600;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 25px;
-    transition: all 0.3s ease;
-    width: 140px;
-}
-
 .btn-order {
     display: inline-block;
     margin-top: 20px;
