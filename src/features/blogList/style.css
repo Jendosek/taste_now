@@ -4,7 +4,6 @@
     margin-bottom: 160px;
 }
 
-/* --- Пошук і Фільтр --- */
 .search-bar-container {
     display: flex;
     align-items: center;
@@ -38,7 +37,6 @@
     font-size: 24px;
 }
 
-/* Фільтр */
 .filter-wrapper {
     position: relative;
 }
@@ -63,7 +61,6 @@
     color: white;
 }
 
-/* Випадаюче меню */
 .filter-dropdown {
     position: absolute;
     top: 55px;
@@ -93,7 +90,6 @@
     font-weight: bold;
 }
 
-/* --- Картки блогу --- */
 .blog-grid {
     display: flex;
     flex-direction: column;
@@ -105,7 +101,7 @@
     display: flex;
     background: white;
     border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05); /* Легка тінь */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05); 
     padding: 45px 60px;
     gap: 30px;
     align-items: center;

@@ -20,13 +20,12 @@ const BlogList = () => {
 
     return (
         <section className="blog-list-section">
-            
-            {/* --- Верхня панель: Пошук і Фільтр --- */}
+
             <div className="search-bar-container">
                 <div className="search-input-wrapper">
-                    <input 
-                        type="text" 
-                        placeholder="Search a Blog..." 
+                    <input
+                        type="text"
+                        placeholder="Search a Blog..."
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                     />
@@ -34,25 +33,22 @@ const BlogList = () => {
                 </div>
 
                 <div className="filter-wrapper">
-                    <button 
+                    <button
                         className={`filter-btn ${isFilterOpen ? 'active' : ''}`}
-                        onClick={() => setIsFilterOpen(!isFilterOpen)}
-                    >
+                        onClick={() => setIsFilterOpen(!isFilterOpen)}>
                         <FiFilter />
                     </button>
 
-                    {/* Випадаюче меню категорій */}
                     {isFilterOpen && (
                         <div className="filter-dropdown">
                             {categories.map(cat => (
-                                <div 
-                                    key={cat} 
+                                <div
+                                    key={cat}
                                     className={`filter-item ${selectedCategory === cat ? 'selected' : ''}`}
                                     onClick={() => {
                                         setSelectedCategory(cat);
-                                        setIsFilterOpen(false); // Закриваємо меню після вибору
-                                    }}
-                                >
+                                        setIsFilterOpen(false);
+                                    }}>
                                     {cat}
                                 </div>
                             ))}
@@ -61,7 +57,6 @@ const BlogList = () => {
                 </div>
             </div>
 
-            {/* --- Список карток --- */}
             <div className="blog-grid">
                 {filteredBlogs.length > 0 ? (
                     filteredBlogs.map((blog) => (

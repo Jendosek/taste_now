@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Press",
+    "description": "Are you interested in our latest news or working on a TasteNow story and need to get in touch?",
+    "buttonText": "Visit Press Page",
+    "extraText": "Submit a request" 
+  },
+  {
+    "id": 2,
+    "title": "Help & Support",
+    "description": "Our support team is spread across the globe to give you answers fast. Ask about anything, at anytime and we’ll be there for you.",
+    "buttonText": "Visit Support Page",
+    "extraText": "Submit a request"
+  },
+  {
+    "id": 3,
+    "title": "Sales",
+    "description": "Get in touch with our sales team to see how we can work together. TasteNow is always searching for great candidates to become a part of our family, contact us!",
+    "buttonText": "Contact Sales",
+    "extraText": "Submit a request"
+  }
+]
