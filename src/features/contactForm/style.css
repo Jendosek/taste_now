@@ -94,8 +94,8 @@ span.error-text {
     margin-left: 5px;
 }
 
-.btn-send {
-    float: right;
+.btn-send-form {
+    margin-left: auto;
     background-color: white;
     color: #F72D57;
     border: none;
@@ -107,7 +107,7 @@ span.error-text {
     transition: transform 0.2s;
 }
 
-.btn-send:hover {
+.btn-send-form:hover {
     background-color: #FFE3E8;
 }
 

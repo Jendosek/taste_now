@@ -121,7 +121,7 @@ const ContactForm = () => {
                         </div>
                     </div>
 
-                    <button type="submit" className="btn-send">Send</button>
+                    <button type="submit" className="btn-send-form">Send</button>
                 </form>
             </div>
         </section>

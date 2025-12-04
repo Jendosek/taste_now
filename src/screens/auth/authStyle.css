@@ -1,0 +1,162 @@
+.auth-page {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.auth-left {
+    flex: 1;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 60px;
+    max-width: 720px;
+}
+
+.auth-logo {
+    width: 150px;
+    margin-bottom: 40px;
+}
+
+.auth-title {
+    font-size: 40px;
+    font-weight: 800;
+    color: #3f3f3f;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.auth-subtitle {
+    color: #666;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.social-icon-svg {
+    width: 37px;
+    height: 37px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.social-icon:hover {
+    transform: scale(1.05);
+}
+
+.divider {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.divider::before, .divider::after {
+    content: "";
+    flex: 1;
+    height: 1.5px;
+    background: #000000;
+}
+
+.divider span {
+    padding: 0 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-input {
+    width: 70%;
+    height: 60px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #F72D57;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    color: #3f3f3f;
+}
+
+.auth-input::placeholder {
+    color: #F72D57;
+    opacity: 0.8;
+}
+
+.btn-auth {
+    width: 100px;
+    font-size: 16px;
+    padding: 12px;
+    background-color: #F72D57;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-auth:hover {
+    background-color: #d11a40;
+}
+
+.auth-footer-text {
+    margin-top: 30px;
+    font-size: 16px;
+    color: #3f3f3f;
+}
+
+.btn-switch {
+    color: #F72D57;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.auth-right {
+    flex: 1; 
+    background-color: #F72D57;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-right::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 100vh solid white;
+    border-right: 100px solid transparent;
+    z-index: 1;
+}
+
+.auth-image {
+    width: 80%;
+    max-width: 600px;
+    z-index: 2; 
+    object-fit: contain;
+    position: relative;
+    right: 20px;
+}
+
+.error-text-reg {
+    color: #F72D57; 
+    font-size: 12px; 
+    margin-top: -15px;
+    margin-bottom: 15px;
+    display: block;
+}

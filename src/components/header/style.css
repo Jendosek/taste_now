@@ -38,11 +38,10 @@
   color: #8a8a8a;
 }
 
-
 .right-container {
   display: flex;
   align-items: center;
-  width: 223px;
+  width: 243px;
   gap: 40px;
 }
 
@@ -98,4 +97,38 @@
     align-items: center;
     justify-content: center;
     border: 2px solid white;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-details {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #3f3f3f;
+    font-weight: bold;
+}
+
+.user-name {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.logout-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+
+.logout-btn:hover {
+    color: #F72D57;
 }
