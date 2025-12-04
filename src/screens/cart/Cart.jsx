@@ -66,6 +66,15 @@ const Cart = () => {
                                     <h3>{item.title}</h3>
                                     <p>Category: {item.category}</p>
                                     <p>Description: {item.description}</p>
+                                    {item.selectedToppings && item.selectedToppings.length > 0 && (
+                                        <div className="item-toppings">
+                                            {item.selectedToppings.map((topping, index) => (
+                                                <span key={index} className="topping-tag">
+                                                    + {topping.name}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    )}
                                 </div>
                             </div>
 

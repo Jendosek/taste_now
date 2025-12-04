@@ -13,27 +13,37 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addItem(state, action) {
-      const newItem = action.payload; 
+      const newItem = action.payload;
       
-      const existingItem = state.items.find((item) => item.id === newItem.id);
+      const toppingsString = newItem.selectedToppings 
+          ? newItem.selectedToppings.map(t => t.name).sort().join('-') 
+          : '';
+      
+      const uniqueCartId = `${newItem.id}-${toppingsString}`;
+
+      const existingItem = state.items.find((item) => item.cartId === uniqueCartId);
 
       state.totalQuantity++;
       state.totalPrice += newItem.price;
+
       if (!existingItem) {
         state.items.push({
+          cartId: uniqueCartId,
           id: newItem.id,
           title: newItem.title,
           imageUrl: newItem.imageUrl,
           price: newItem.price,
           quantity: 1,
           totalPrice: newItem.price,
-          description: newItem.description,
+          selectedToppings: newItem.selectedToppings || [],
           category: newItem.category,
+          description: newItem.description
         });
       } else {
         existingItem.quantity++;
         existingItem.totalPrice += newItem.price;
       }
+      
       localStorage.setItem('cart', JSON.stringify(state));
     },
 

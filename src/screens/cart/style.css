@@ -95,6 +95,12 @@
 
 }
 
+.item-toppings {
+    font-size: 14px;
+    color: #888;
+    margin: 0;
+}
+
 .item-price,
 .item-total {
     font-weight: 600;

@@ -6,6 +6,7 @@ import { Pagination, Navigation } from 'swiper/modules';
 import { FaPizzaSlice, FaHamburger, FaUtensils } from "react-icons/fa";
 import { PiBowlFood } from "react-icons/pi";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import ProductCard from './ProductCard';
 import 'swiper/css/pagination';
 import 'swiper/css';
 import './style.css';
@@ -80,7 +81,8 @@ const PopularCategories = () => {
                     }}>
                     {currentProducts.map((product) => (
                         <SwiperSlide key={product.id}>
-                            <div className="product-card">
+                            <ProductCard product={product} />
+                            {/* <div className="product-card">
                                 <div className="product-image">
                                     <img src={product.imageUrl} alt={product.title} />
                                     {product.rating && <span className="rating">★ {product.rating}</span>}
@@ -97,7 +99,7 @@ const PopularCategories = () => {
                                         Add to cart
                                     </button>
                                 </div>
-                            </div>
+                            </div> */}
                         </SwiperSlide>
                     ))}
                 </Swiper>

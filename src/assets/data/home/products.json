@@ -6,7 +6,12 @@
         "description": "Di napoles",
         "price": 11.99,
         "rating": 5,
-        "imageUrl": "/products/pepperoni_pizza.png"
+        "imageUrl": "/products/pepperoni_pizza.png",
+        "availableToppings": [
+            { "name": "Extra Cheese", "price": 2.00 },
+            { "name": "Mushrooms", "price": 1.50 },
+            { "name": "Onion", "price": 0.50 }
+        ]
     },
     {
         "id": "p2",
@@ -15,7 +20,12 @@
         "description": "Di napoles",
         "price": 13.99,
         "rating": 4.5,
-        "imageUrl": "/products/meat_pizza.png"
+        "imageUrl": "/products/meat_pizza.png",
+        "availableToppings": [
+            { "name": "Extra Cheese", "price": 2.00 },
+            { "name": "Mushrooms", "price": 1.50 },
+            { "name": "Onion", "price": 0.50 }
+        ]
     },
     {
         "id": "p3",
@@ -24,7 +34,12 @@
         "description": "Cosa di Mario",
         "price": 12.99,
         "rating": 4.3,
-        "imageUrl": "/products/vegetarian_pizza.png"
+        "imageUrl": "/products/vegetarian_pizza.png",
+        "availableToppings": [
+            { "name": "Extra Cheese", "price": 2.00 },
+            { "name": "Mushrooms", "price": 1.50 },
+            { "name": "Onion", "price": 0.50 }
+        ]
     },
     {
         "id": "p4",
@@ -33,7 +48,12 @@
         "description": "Milano",
         "price": 15.99,
         "rating": 4.0,
-        "imageUrl": "/products/mediterranean_pizza.png"
+        "imageUrl": "/products/mediterranean_pizza.png",
+        "availableToppings": [
+            { "name": "Extra Cheese", "price": 2.00 },
+            { "name": "Mushrooms", "price": 1.50 },
+            { "name": "Onion", "price": 0.50 }
+        ]
     },
     {
         "id": "b1",
@@ -42,7 +62,12 @@
         "description": "Classic Beef",
         "price": 8.99,
         "rating": 4.8,
-        "imageUrl": "/products/burger.png"
+        "imageUrl": "/products/burger.png",
+        "availableToppings": [
+            { "name": "Extra Cheese", "price": 1.00 },
+            { "name": "Bacon", "price": 1.50 },
+            { "name": "Cucumber", "price": 2.00 }
+        ]
     },
     {
         "id": "b2",
@@ -51,7 +76,12 @@
         "description": "With Crispy Bacon",
         "price": 9.99,
         "rating": 4.6,
-        "imageUrl": "/products/burger.png"
+        "imageUrl": "/products/burger.png",
+        "availableToppings": [
+            { "name": "Extra Cheese", "price": 1.00 },
+            { "name": "Bacon", "price": 1.50 },
+            { "name": "Cucumber", "price": 2.00 }
+        ]
     },
     {
         "id": "b3",
@@ -60,7 +90,12 @@
         "description": "With Sautéed Mushrooms",
         "price": 10.49,
         "rating": 4.4,
-        "imageUrl": "/products/burger.png"
+        "imageUrl": "/products/burger.png",
+        "availableToppings": [
+            { "name": "Extra Cheese", "price": 1.00 },
+            { "name": "Bacon", "price": 1.50 },
+            { "name": "Cucumber", "price": 2.00 }
+        ]
     },
     {
         "id": "b4",
@@ -69,7 +104,12 @@
         "description": "Double Beef Patty",
         "price": 11.99,
         "rating": 4.2,
-        "imageUrl": "/products/burger.png"
+        "imageUrl": "/products/burger.png",
+        "availableToppings": [
+            { "name": "Extra Cheese", "price": 1.00 },
+            { "name": "Bacon", "price": 1.50 },
+            { "name": "Cucumber", "price": 2.00 }
+        ]
     },
     {
         "id": "s1",
@@ -78,7 +118,12 @@
         "description": "With Grilled Chicken",
         "price": 9.99,
         "rating": 4.8,
-        "imageUrl": "/products/salad.png"
+        "imageUrl": "/products/salad.png",
+        "availableToppings": [
+            { "name": "Extra Croutons", "price": 1.00 },
+            { "name": "Parmesan Cheese", "price": 1.50 },
+            { "name": "Bacon Bits", "price": 2.00 }
+        ]
     },
     {
         "id": "s2",
@@ -87,7 +132,12 @@
         "description": "With Feta Cheese",
         "price": 8.99,
         "rating": 4.5,
-        "imageUrl": "/products/salad.png"
+        "imageUrl": "/products/salad.png",
+        "availableToppings": [
+            { "name": "Extra Feta", "price": 1.00 },
+            { "name": "Olives", "price": 1.50 },
+            { "name": "Cucumber", "price": 2.00 }
+        ]
     },
     {
         "id": "s3",
@@ -96,7 +146,12 @@
         "description": "Fresh Vegetables",
         "price": 7.99,
         "rating": 4.3,
-        "imageUrl": "/products/salad.png"
+        "imageUrl": "/products/salad.png",
+        "availableToppings": [
+            { "name": "Avocado", "price": 1.00 },
+            { "name": "Nuts", "price": 1.50 },
+            { "name": "Cheese", "price": 2.00 }
+        ]
     },
     {
         "id": "s4",
@@ -105,7 +160,12 @@
         "description": "With Avocado and Bacon",
         "price": 10.49,
         "rating": 4.1,
-        "imageUrl": "/products/salad.png"
+        "imageUrl": "/products/salad.png",
+        "availableToppings": [
+            { "name": "Avocado", "price": 1.00 },
+            { "name": "Bacon Bits", "price": 1.50 },
+            { "name": "Cheese", "price": 2.00 }
+        ]
     },
     {
         "id": "c1",
@@ -114,7 +174,12 @@
         "description": "2 Pizzas, 4 Burgers, 2 Salads",
         "price": 49.99,
         "rating": 4.9,
-        "imageUrl": "/products/combos.png"
+        "imageUrl": "/products/combos.png",
+        "availableToppings": [
+            { "name": "Extra burger", "price": 2.00 },
+            { "name": "Extra fries", "price": 1.50 },
+            { "name": "Doubled ", "price": 0.50 }
+        ]
     },
     {
         "id": "c2",
@@ -123,7 +188,12 @@
         "description": "1 Pizza, 2 Burgers, 1 Salad",
         "price": 29.99,
         "rating": 4.7,
-        "imageUrl": "/products/combos.png"
+        "imageUrl": "/products/combos.png",
+        "availableToppings": [
+            { "name": "Extra burger", "price": 2.00 },
+            { "name": "Extra fries", "price": 1.50 },
+            { "name": "Doubled ", "price": 0.50 }
+        ]
     },
     {
         "id": "c3",
@@ -132,7 +202,12 @@
         "description": "3 Pizzas, 6 Burgers, 3 Salads",
         "price": 69.99,
         "rating": 4.6,
-        "imageUrl": "/products/combos.png"
+        "imageUrl": "/products/combos.png",
+        "availableToppings": [
+            { "name": "Extra burger", "price": 2.00 },
+            { "name": "Extra fries", "price": 1.50 },
+            { "name": "Doubled ", "price": 0.50 }
+        ]
     },
     {
         "id": "c4",
@@ -141,6 +216,11 @@
         "description": "1 Burger, 1 Salad, Drink",
         "price": 14.99,
         "rating": 4.4,
-        "imageUrl": "/products/combos.png"
+        "imageUrl": "/products/combos.png",
+        "availableToppings": [
+            { "name": "Extra burger", "price": 2.00 },
+            { "name": "Extra fries", "price": 1.50 },
+            { "name": "Doubled ", "price": 0.50 }
+        ]
     }
 ]

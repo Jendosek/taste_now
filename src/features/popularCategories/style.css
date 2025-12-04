@@ -224,3 +224,59 @@
 .pagination-dot:hover {
     background-color: #ff8ba4;
 }
+
+.product-card {
+    transition: all 0.3s ease;
+    height: auto;
+    min-height: 400px;
+}
+
+.product-card.expanded {
+    border-color: #F72D57;
+    box-shadow: 0 10px 40px rgba(247, 45, 87, 0.15);
+}
+
+/* Блок з топінгами */
+.card-toppings {
+    text-align: left;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    animation: fadeIn 0.3s ease;
+}
+
+
+
+.card-toppings h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.topping-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.topping-row input {
+    margin-right: 10px;
+    accent-color: #F72D57;
+    width: 16px;
+    height: 16px;
+}
+
+.topping-name {
+    flex: 1;
+    color: #555;
+}
+
+.topping-price {
+    font-weight: bold;
+    color: #F72D57;
+}

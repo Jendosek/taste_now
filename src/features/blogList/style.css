@@ -17,6 +17,7 @@
 
 .search-input-wrapper input {
     width: 100%;
+    height: 45px;
     padding: 12px 40px 12px 20px;
     border: 2px solid #F72D57; 
     border-radius: 50px;
