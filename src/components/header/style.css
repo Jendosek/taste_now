@@ -34,6 +34,7 @@
 .nav-link.active {
   color: #F72D57;
 }
+
 .nav-link:hover {
   color: #8a8a8a;
 }
@@ -53,6 +54,7 @@
 .btn-cart svg path {
   transition: fill 0.3s ease;
 }
+
 .btn-cart:hover svg path {
   fill: #F72D57;
 }
@@ -63,6 +65,7 @@
   text-decoration: none;
   padding: 12px 30px;
   border-radius: 5px;
+  border: none;
   font-weight: 400;
   font-size: 16px;
   transition: background-color 0.3s ease;
@@ -74,43 +77,43 @@
 }
 
 .btn-cart {
-    position: relative; 
-    width: 43px;
-    height: 43px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  width: 43px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cart-badge {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    background-color: #F72D57;
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid white;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #F72D57;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
 }
 
 .user-info {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .user-details {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #3f3f3f;
-    font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #3f3f3f;
+  font-weight: bold;
 }
 
 .user-name {
@@ -119,16 +122,143 @@
 }
 
 .logout-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #666;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: color 0.2s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
 }
 
 .logout-btn:hover {
+  color: #F72D57;
+}
+
+.hamburger-btn {
+  display: none;
+}
+
+/* --- АДАПТАЦІЯ (MOBILE) --- */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 15px 20px;
+    /* Зменшуємо величезні відступи */
+    position: relative;
+  }
+
+  .logo-container {
+    margin-right: 0;
+    /* Прибираємо відступ, бо меню зникло */
+    width: 100px;
+    /* Трохи менше лого */
+  }
+
+  .logo-container svg {
+    width: 100%;
+    height: auto;
+  }
+
+  .right-container {
+    width: auto;
+    /* Автоматична ширина */
+    gap: 20px;
+  }
+
+  /* Показуємо бургер */
+  .hamburger-btn {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* --- МОБІЛЬНЕ МЕНЮ (ШТОРКА) --- */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    z-index: 1000;
+    /* Поверх усього */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    /* Анімація виїзду */
+    transform: translateX(100%);
+    /* Сховано праворуч */
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .mobile-menu.open {
+    transform: translateX(0);
+    /* Виїжджає на екран */
+  }
+
+  .mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .close-menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+  }
+
+  .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    font-size: 22px;
+    font-weight: 400;
+    color: #3F3F3F;
+  }
+
+  .mobile-nav-links a {
+    text-decoration: none;
+    color: #3f3f3f;
+  }
+
+  .mobile-nav-links a.active {
     color: #F72D57;
+  }
+
+  .mobile-auth-section {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+  }
+
+  .mobile-user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    justify-content: center;
+  }
+
+  .btn-cart {
+    width: 36px;
+    height: 36px;
+  }
+
+  .cart-badge {
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    top: -2px;
+    right: -4px;
+  }
 }

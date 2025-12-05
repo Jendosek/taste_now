@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { ReactComponent as Logo } from '../../assets/img/header/icons/logo.svg'
 import { ReactComponent as Cart } from '../../assets/img/header/icons/cart.svg'
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../../auth/authSlice";
 import { clearCart } from "../../features/cartSlice";
-import { FaUser, FaSignOutAlt } from "react-icons/fa";
+import { FaUser, FaSignOutAlt, FaBars, FaTimes } from "react-icons/fa";
+import useResponsive from "../../hooks/useResponsive";
 import './style.css'
 
 const Header = () => {
@@ -14,11 +15,17 @@ const Header = () => {
 
     const totalQuantity = useSelector((state) => state.cart.totalQuantity);
 
+    const isMobile = useResponsive();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     const handleLogout = () => {
         dispatch(clearCart());
         dispatch(logout());
+        setIsMenuOpen(false);
         // Можна перекинути на логін, або лишитись тут
     };
+
+    const closeMenu = () => setIsMenuOpen(false);
 
     return (
         <header className="header-container">
@@ -27,36 +34,81 @@ const Header = () => {
                     <Logo />
                 </Link>
             </div>
-            <nav className="nav-container">
-                <NavLink to="/" className="nav-link">Home</NavLink>
-                <NavLink to="/about" className="nav-link">About us</NavLink>
-                <NavLink to="/blog" className="nav-link">Blog</NavLink>
-                <NavLink to="/contact" className="nav-link">Contact us</NavLink>
-            </nav>
+            {!isMobile && (
+                <nav className="nav-container">
+                    <NavLink to="/" className="nav-link">Home</NavLink>
+                    <NavLink to="/about" className="nav-link">About us</NavLink>
+                    <NavLink to="/blog" className="nav-link">Blog</NavLink>
+                    <NavLink to="/contact" className="nav-link">Contact us</NavLink>
+                </nav>
+            )}
+
             <div className="right-container">
-                <Link to="/cart" className="btn-cart">
+                <Link to="/cart" className="btn-cart" onClick={closeMenu}>
                     <Cart />
                     {totalQuantity > 0 && (
                         <span className="cart-badge">{totalQuantity}</span>
                     )}
                 </Link>
-                {isAuthenticated ? (
-                    <div className="user-info">
-                        <div className="user-details">
-                            <FaUser size={30} color="#F72D57" />
-                            <span className="user-name">{user.username}</span>
+
+                {!isMobile && (
+                    isAuthenticated ? (
+                        <div className="user-info">
+                            <div className="user-details">
+                                <FaUser size={20} color="#F72D57" />
+                                <span className="user-name">{user.username}</span>
+                            </div>
+                            <button className="logout-btn" onClick={handleLogout} title="Logout">
+                                <FaSignOutAlt size={20} />
+                            </button>
                         </div>
-                        <button
-                            className="logout-btn"
-                            onClick={handleLogout}
-                            title="Logout">
-                            <FaSignOutAlt size={28} />
-                        </button>
-                    </div>
-                ) : (
-                    <Link to="/signup" className="btn-signup">Sign up / in</Link>
+                    ) : (
+                        <Link to="/signup" className="btn-signup">Sign up / in</Link>
+                    )
+                )}
+
+                {isMobile && (
+                    <button className="hamburger-btn" onClick={() => setIsMenuOpen(true)}>
+                        <FaBars size={24} color="#333" />
+                    </button>
                 )}
             </div>
+
+            {isMobile && (
+                <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
+                    <div className="mobile-menu-header">
+                        <Logo />
+                        <button className="close-menu-btn" onClick={closeMenu}>
+                            <FaTimes size={24} />
+                        </button>
+                    </div>
+
+                    <nav className="mobile-nav-links">
+                        <NavLink to="/" onClick={closeMenu}>Home</NavLink>
+                        <NavLink to="/about" onClick={closeMenu}>About us</NavLink>
+                        <NavLink to="/blog" onClick={closeMenu}>Blog</NavLink>
+                        <NavLink to="/contact" onClick={closeMenu}>Contact us</NavLink>
+                    </nav>
+
+                    <div className="mobile-auth-section">
+                        {isAuthenticated ? (
+                            <>
+                                <div className="mobile-user-info">
+                                    <FaUser size={20} color="#F72D57" />
+                                    <span>{user.username}</span>
+                                </div>
+                                <button className="btn-signup" onClick={handleLogout} style={{width: '100%', marginTop: '10px'}}>
+                                    Logout
+                                </button>
+                            </>
+                        ) : (
+                            <Link to="/signup" className="btn-signup" onClick={closeMenu} style={{display: 'block', textAlign: 'center'}}>
+                                Sign up / in
+                            </Link>
+                        )}
+                    </div>
+                </div>
+            )}
         </header>
     )
 }

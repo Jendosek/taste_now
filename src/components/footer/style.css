@@ -49,3 +49,39 @@
 .footer-link:hover {
     opacity: 0.5;
 }
+
+@media (max-width: 768px) {
+    .footer-container {
+        /* 1. Ставимо елементи в стовпчик (Лого зверху, посилання знизу) */
+        flex-direction: column;
+        
+        /* 2. Прибираємо фіксовану висоту, щоб футер міг рости */
+        height: auto; 
+        
+        /* 3. Зменшуємо бічні відступи з 100px до 20px */
+        padding: 40px 20px; 
+        
+        /* 4. Додаємо відступ між логотипом і посиланнями */
+        gap: 30px; 
+    }
+
+    .footer-content {
+        /* Дозволяємо колонкам посилань переноситися, якщо мало місця */
+        flex-wrap: wrap; 
+        
+        /* Розподіляємо їх рівномірно або по центру */
+        justify-content: center; 
+        
+        /* Зменшуємо гігантський відступ 60px */
+        gap: 30px; 
+        
+        width: 100%;
+        text-align: center; /* Центруємо текст посилань */
+    }
+
+    /* Вирівнюємо самі колонки по центру */
+    .first-column, .second-column, .third-column {
+        align-items: center; /* Це для flex-column контейнерів */
+        min-width: 100px; /* Щоб зручно натискати */
+    }
+}
