@@ -140,19 +140,15 @@
   display: none;
 }
 
-/* --- АДАПТАЦІЯ (MOBILE) --- */
 @media (max-width: 768px) {
   .header-container {
     padding: 15px 20px;
-    /* Зменшуємо величезні відступи */
     position: relative;
   }
 
   .logo-container {
     margin-right: 0;
-    /* Прибираємо відступ, бо меню зникло */
     width: 100px;
-    /* Трохи менше лого */
   }
 
   .logo-container svg {
@@ -162,11 +158,9 @@
 
   .right-container {
     width: auto;
-    /* Автоматична ширина */
     gap: 20px;
   }
 
-  /* Показуємо бургер */
   .hamburger-btn {
     display: block;
     background: none;
@@ -174,7 +168,6 @@
     cursor: pointer;
   }
 
-  /* --- МОБІЛЬНЕ МЕНЮ (ШТОРКА) --- */
   .mobile-menu {
     position: fixed;
     top: 0;
@@ -183,20 +176,15 @@
     height: 100vh;
     background-color: white;
     z-index: 1000;
-    /* Поверх усього */
     padding: 20px;
     display: flex;
     flex-direction: column;
-
-    /* Анімація виїзду */
     transform: translateX(100%);
-    /* Сховано праворуч */
     transition: transform 0.3s ease-in-out;
   }
 
   .mobile-menu.open {
     transform: translateX(0);
-    /* Виїжджає на екран */
   }
 
   .mobile-menu-header {
