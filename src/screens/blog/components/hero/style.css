@@ -45,3 +45,30 @@
 .btn-blog:hover {
     background-color: #d0264a;
 }
+
+@media (max-width: 768px) {
+    .hero-section-blog {
+        padding: 0 20px;
+        margin-top: 60px;
+    }
+
+    .hero-section-blog h1 {
+        width: 100%;
+        max-width: 100%;
+        font-size: 32px; 
+    }
+
+    .hero-section-blog p {
+        width: 100%;
+        max-width: 100%;
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    .btn-blog {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        margin-top: 25px;
+    }
+}

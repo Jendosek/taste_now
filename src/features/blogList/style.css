@@ -165,3 +165,70 @@
     color: #3f3f3f;
     padding: 40px;
 }
+
+@media (max-width: 768px) {
+    .blog-list-section {
+        padding: 0 20px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .search-bar-container {
+        gap: 10px; 
+    }
+
+    .search-input-wrapper {
+        width: 100%;
+        flex: 1; 
+    }
+    
+    .search-icon {
+        left: auto; 
+        right: 15px; 
+    }
+
+    .blog-card {
+        flex-direction: column-reverse;
+        padding: 20px;
+        gap: 30px;
+        align-items: flex-start;
+    }
+
+    .blog-image {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .blog-image img {
+        height: auto;
+        max-height: 250px;
+        object-fit: cover;
+    }
+
+    .blog-text {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .blog-text h3 {
+        font-size: 24px;
+    }
+
+    .blog-text p {
+        font-size: 15px;
+    }
+    
+    .read-btn {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 25px;
+    }
+    .filter-dropdown {
+        left: auto;
+        right: 0;
+    }
+    .no-results {
+        font-size: 18px;
+        padding: 20px;
+    }
+}
