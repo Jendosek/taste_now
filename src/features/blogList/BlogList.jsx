@@ -77,7 +77,6 @@ const BlogList = () => {
                     <div className="no-results">No blogs found</div>
                 )}
             </div>
-
         </section>
     );
 };
