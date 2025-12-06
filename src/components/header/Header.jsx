@@ -59,7 +59,7 @@ const Header = () => {
                                 <span className="user-name">{user.username}</span>
                             </div>
                             <button className="logout-btn" onClick={handleLogout} title="Logout">
-                                <FaSignOutAlt size={20} />
+                                <FaSignOutAlt size={24} />
                             </button>
                         </div>
                     ) : (
