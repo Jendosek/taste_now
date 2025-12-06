@@ -123,3 +123,90 @@
     margin: 0;
     margin-top: 20px;
 }
+
+@media (max-width: 768px) {
+    .getKnowAboutUs-section {
+        padding: 0 20px;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .getKnowAboutUs-title {
+        font-size: 32px;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .teamwork-container img,
+    .enviroment-container img,
+    .employees-container img {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+        object-fit: cover;
+    }
+
+    .teamwork-container {
+        flex-direction: column;
+        margin-top: 30px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .teamwork-container-text {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .teamwork-container-text h2, 
+    .teamwork-container-text p {
+        width: 100%;
+    }
+
+    .teamwork-container-text h2 { font-size: 28px; }
+
+    .enviroment-container {
+        flex-direction: column-reverse; 
+        margin-top: 60px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .enviroment-container-text {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .enviroment-container-text h2,
+    .enviroment-container-text p {
+        width: 100%;
+    }
+    
+    .enviroment-container-text h2 { 
+        font-size: 28px; 
+    }
+
+    .employees-container {
+        flex-direction: column;
+        margin-top: 60px;
+        padding: 40px 20px;
+        width: 100vw; 
+        margin-left: -20px;
+        margin-right: -20px;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    .employees-container-text {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .employees-container-text h2,
+    .employees-container-text p {
+        width: 100%;
+    }
+    
+    .employees-container-text h2 { font-size: 28px; }
+}

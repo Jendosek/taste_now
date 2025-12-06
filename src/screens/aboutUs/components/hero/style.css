@@ -35,8 +35,53 @@
     margin-top: 30px;
 }
 
-.hero-image img {
+.hero-image-contact img {
     width: 640px;
     height: 520px;
     object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .hero-section-about {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px;
+        margin-top: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hero-text {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+    .hero-text h1 {
+        width: 100%;
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+    .hero-text p {
+        width: 100%;
+        font-size: 16px;
+        margin-top: 15px;
+        padding: 0 10px;
+    }
+
+    .hero-image-contact {
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-image-contact img {
+        width: 100% !important;
+        max-width: 350px;
+        height: auto;
+        object-fit: contain;
+    }
 }
