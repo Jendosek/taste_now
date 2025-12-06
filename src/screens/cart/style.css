@@ -235,3 +235,114 @@
 .btn-clear:hover {
     background-color: #FEE2E2;
 }
+
+@media (max-width: 768px) {
+    .cart-page {
+        padding: 20px 15px;
+    }
+
+    .cart-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .cart-header h1 {
+        font-size: 28px;
+    }
+
+    .cart-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .cart-labels {
+        display: none;
+    }
+
+    .cart-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px;
+        background: #fff;
+        border: 1px solid #eee;
+        border-radius: 12px;
+        margin-bottom: 15px;
+        width: 130%;
+    }
+
+    .item-info {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .item-info img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .item-details h3 {
+        font-size: 16px;
+    }
+
+    .item-price,
+    .item-quantity,
+    .item-total {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .item-price::before {
+        content: "Price:";
+        color: #999;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .item-quantity::before {
+        content: "Quantity:";
+        color: #999;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .item-total {
+        border-top: 1px dashed #eee;
+        padding-top: 10px;
+        margin-top: 5px;
+        font-size: 18px;
+    }
+
+    .item-total::before {
+        content: "Total:";
+        color: #333;
+        font-weight: 600;
+    }
+
+    .cart-summary {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .cart-empty {
+        align-items: center;
+        text-align: center;
+        padding: 120px 20px;
+    }
+
+    .cart-empty h2 {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    .cart-empty p {
+        margin: 0 auto;
+        width: 80%;
+        color: #555;
+    }
+}

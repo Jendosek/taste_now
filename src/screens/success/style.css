@@ -22,3 +22,19 @@
     border-radius: 6px;
     transition: background-color 0.3s ease;
 }
+
+@media (max-width: 768px) {
+    .success-page {
+        padding: 110px 40px;
+    }
+
+    .success-page h1 {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    .success-page p {
+        margin: 0;
+        margin-bottom: 5px;
+    }
+}

@@ -79,7 +79,7 @@ const Cart = () => {
                             </div>
 
                             <div className="item-price">
-                                ${item.price}
+                                ${item.price.toFixed(2)}
                             </div>
 
                             <div className="item-quantity">
