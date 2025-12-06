@@ -20,7 +20,6 @@ const ContactCards = () => {
                                 {card.buttonText}
                             </Link>
                             
-                            {/* Цей текст буде з'являтися тільки при наведенні */}
                             {card.extraText && (
                                 <Link to="/*" className="extra-link">
                                     {card.extraText}

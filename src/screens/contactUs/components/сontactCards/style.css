@@ -88,3 +88,33 @@
 .extra-link:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+    .contact-cards-section {
+        padding: 0 20px;
+        margin-top: 8ch;
+    }
+
+    .contact-cards-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .contact-card {
+        width: 100%;
+        max-width: 350px;
+        height: auto; 
+        min-height: 300px;
+        padding: 40px 30px 30px 30px;
+        gap: 30px;
+    }
+
+    .card-content h3 {
+        font-size: 24px;
+    }
+
+    .card-content p {
+        font-size: 15px;
+    }
+}

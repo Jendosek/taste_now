@@ -141,3 +141,48 @@
 .pagination-dot:hover {
     background-color: #ff8ba4;
 }
+
+@media (max-width: 768px) {
+    .work-section {
+        padding: 40px 20px; 
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+
+    .work-header h2 {
+        font-size: 32px;
+    }
+
+    .work-swiper {
+        padding: 20px 0;
+    }
+
+    .work-card {
+        width: 100%; 
+        max-width: 350px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .work-image img {
+        width: 100%;
+        height: auto;
+        max-height: 250px;
+        object-fit: cover;
+    }
+
+    .work-info {
+        height: auto;
+        padding: 15px 20px;
+    }
+
+    .work-navigation {
+        margin-top: 20px;
+        gap: 15px;
+    }
+
+    .nav-arrow {
+        width: 35px;
+        height: 35px;
+    }
+}
