@@ -59,7 +59,7 @@ const Cart = () => {
                     </div>
 
                     {items.map((item) => (
-                        <div key={item.id} className="cart-item">
+                        <div key={item.cartId} className="cart-item">
                             <div className="item-info">
                                 <img src={item.imageUrl} alt={item.title} />
                                 <div className="item-details">
@@ -83,7 +83,7 @@ const Cart = () => {
                             </div>
 
                             <div className="item-quantity">
-                                <button onClick={() => handleRemove(item.id)}>-</button>
+                                <button onClick={() => handleRemove(item.cartId)}>-</button>
                                 <span>{item.quantity}</span>
                                 <button onClick={() => handleAdd(item)}>+</button>
                             </div>
