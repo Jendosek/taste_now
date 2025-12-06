@@ -42,3 +42,32 @@
 .btn-home:hover {
     background-color: #d11a40;
 }
+
+@media (max-width: 768px) {
+    .not-found-container {
+        padding: 60px 20px; 
+        min-height: 60vh; 
+    }
+
+    .error-code {
+        font-size: 56px;
+    }
+
+    .error-title {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .error-text {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .btn-home {
+        width: 50%;
+        display: block;
+        box-sizing: border-box;
+        padding: 15px;
+        margin-top: 10px;
+    }
+}
