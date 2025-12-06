@@ -45,3 +45,45 @@
     height: 450px;
     object-fit: cover;
 }
+
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        padding: 70px 20px 40px 20px;
+        margin-top: 0;
+        text-align: center; 
+    }
+
+    .hero-text {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-text h1 {
+        width: 100% !important; 
+        font-size: 32px;
+    }
+
+    .hero-text p {
+        width: 100% !important;
+        font-size: 16px;
+    }
+
+    .hero-image {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .hero-image img {
+        width: 90% !important;
+        height: auto !important;
+        position: relative;
+        scale: 1.3;
+        right: 20px;
+    }
+}

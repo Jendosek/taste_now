@@ -236,7 +236,6 @@
     box-shadow: 0 10px 40px rgba(247, 45, 87, 0.15);
 }
 
-/* Блок з топінгами */
 .card-toppings {
     text-align: left;
     margin: 15px 0;
@@ -246,8 +245,6 @@
     border: 1px solid #eee;
     animation: fadeIn 0.3s ease;
 }
-
-
 
 .card-toppings h4 {
     font-size: 14px;
@@ -279,4 +276,57 @@
 .topping-price {
     font-weight: bold;
     color: #F72D57;
+}
+
+@media (max-width: 768px) {
+    .popular-categories-section {
+        padding: 0 20px; 
+    }
+
+    .section-title {
+        font-size: 32px;
+        margin: 20px 0;
+    }
+
+    .categories-tabs {
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .category-btn {
+        width: 48%;
+        height: 60px;
+        padding: 10px;
+        
+        font-size: 16px;
+        gap: 8px;
+    }
+
+    .category-btn svg {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .products-slider-container {
+        padding: 10px 5px; 
+    }
+
+    .product-card {
+        min-height: auto;
+        padding: 15px;
+    }
+    
+    .product-image {
+        height: 150px;
+    }
+
+    .category-navigation {
+        margin-top: 20px;
+        gap: 15px;
+    }
+    
+    .nav-arrow {
+        width: 35px;
+        height: 35px;
+    }
 }

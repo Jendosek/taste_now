@@ -50,3 +50,45 @@
 .delivery-image img {
     height: 600px;
 }
+
+@media (max-width: 768px) {
+    .delivery-container {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 40px; 
+        margin-top: 40px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .delivery-text {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .delivery-text h2 {
+        font-size: 32px;
+    }
+
+    .delivery-text p {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    .delivery-image {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .delivery-image img {
+        width: 100%;
+        height: auto;
+        max-width: 350px;
+        max-height: none;
+    }
+    
+    .btn-order {
+        width: 100%;
+        box-sizing: border-box; 
+    }
+}
