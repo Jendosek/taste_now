@@ -163,47 +163,41 @@ form {
 
 @media (max-width: 768px) {
     .auth-page {
-        flex-direction: column; /* Хоча ми ховаємо праву частину, це корисно */
-        min-height: auto; /* Дозволяємо сторінці бути коротшою */
+        flex-direction: column;
+        min-height: auto;
     }
 
-    /* 1. ЛІВА ЧАСТИНА (ФОРМА) */
     .auth-left {
-        width: 100%; /* Займає весь екран */
+        width: 100%;
         max-width: 100%;
-        padding: 40px 20px; /* Зменшуємо бічні відступи з 60px до 20px */
-        
-        /* Щоб хедер не перекривав верх, якщо він фіксований */
+        padding: 40px 20px;
         padding-top: 100px; 
     }
 
     .auth-logo {
-        width: 120px; /* Трохи менше лого */
+        width: 120px;
         margin-bottom: 30px;
     }
 
     .auth-title {
-        font-size: 32px; /* Менший шрифт */
+        font-size: 32px;
     }
 
-    /* 2. ПОЛЯ ВВОДУ */
     .auth-input {
-        width: 100%; /* Розтягуємо на всю ширину контейнера */
-        box-sizing: border-box; /* Важливо, щоб padding не вилазив */
+        width: 100%; 
+        box-sizing: border-box; 
     }
     
     .divider {
-        width: 100%; /* Роздільник теж на всю ширину */
+        width: 100%;
     }
 
-    /* 3. ХОВАЄМО ПРАВУ ЧАСТИНУ */
     .auth-right {
-        display: none; /* Просто прибираємо її */
+        display: none;
     }
     
-    /* 4. КНОПКА */
     .btn-auth {
-        width: 100%; /* Зручна велика кнопка для пальця */
+        width: 100%;
         padding: 15px;
     }
 }
