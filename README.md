@@ -10,14 +10,13 @@
     <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
     <img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white" alt="Redux" />
     <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase" />
-    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
     <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" alt="React Router" />
   </p>
   
   <p>
+    <a href="#встановлення">Про проєкт</a> •
     <a href="#функціонал">Функціонал</a> •
     <a href="#скріншоти">Скріншоти</a> •
-    <a href="#встановлення">Встановлення</a> •
     <a href="#структура">Структура</a>
   </p>
 </div>
@@ -43,17 +42,19 @@
 
 | Головна сторінка (Desktop) | Мобільна версія | Кошик |
 |:---:|:---:|:---:|
-| <img src="ПОСИЛАННЯ_НА_КАРТИНКУ_1" width="300" /> | <img src="ПОСИЛАННЯ_НА_КАРТИНКУ_2" width="150" /> | <img src="ПОСИЛАННЯ_НА_КАРТИНКУ_3" width="300" /> |
+| <img src="src/assets/docs/dekstop.png" width="300" /> | <img src="src/assets/docs/mobile.png" width="150" /> | <img src="src/assets/docs/cart.png" width="300" /> |
 
 ## 📂 Структура проекту
 
 ```text
 src/
 ├── assets/          # Зображення, іконки та глобальні стилі
+├── auth/            # Логіка авторизації
 ├── components/      # Перевикористовувані UI компоненти (Button, Header, Card)
+├── features/        # Компоненти зі складною логікою
+├── hooks/           # Кастомні хуки (useResponsive, etc.)
+├── redux/           # Redux: slices та конфігурація store
 ├── screens/         # Сторінки додатку (Home, Cart, AboutUs, NotFound)
-├── store/           # Redux: slices та конфігурація store
-├── hooks/           # Кастомні хуки (useAuth, etc.)
 ├── firebase.js      # Конфігурація Firebase
 ├── App.js           # Головний компонент та роутинг
 └── index.js         # Точка входу
