@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h1>🍕 TasteNow</h1>
+  
+  <p>
+    <b>Сучасний та адаптивний веб-сервіс для доставки їжі</b>
+  </p>
 
-## Available Scripts
+  <p>
+    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+    <img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white" alt="Redux" />
+    <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase" />
+    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+    <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" alt="React Router" />
+  </p>
+  
+  <p>
+    <a href="#функціонал">Функціонал</a> •
+    <a href="#скріншоти">Скріншоти</a> •
+    <a href="#встановлення">Встановлення</a> •
+    <a href="#структура">Структура</a>
+  </p>
+</div>
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📖 Про проект
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**TasteNow** — це Single Page Application (SPA), розроблений для імітації повного циклу замовлення їжі. Проект демонструє навички роботи з сучасною екосистемою React, управлінням станом через Redux Toolkit та інтеграцією з хмарними сервісами Firebase.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Особлива увага приділена **UX/UI дизайну** та **адаптивності** — додаток виглядає чудово як на великих моніторах, так і на мобільних телефонах.
 
-### `npm test`
+## ✨ Функціонал
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*   🔐 **Авторизація:** Реєстрація та вхід користувачів (Firebase Auth).
+*   🛒 **Розумний кошик:** Додавання/видалення товарів, зміна кількості, підрахунок загальної суми. Стан зберігається при перезавантаженні.
+*   📱 **Адаптивність:** Mobile-first підхід. Повністю адаптивне меню, слайдери та сітки товарів.
+*   🔍 **Фільтрація:** Сортування страв за категоріями (Піца, Бургери, Салати тощо).
+*   🎨 **UI Компоненти:** Кастомні слайдери (Swiper), модальні вікна, анімовані кнопки.
+*   ⚠️ **Обробка помилок:** Сторінка 404, валідація форм.
 
-### `npm run build`
+## 📸 Скріншоти
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Головна сторінка (Desktop) | Мобільна версія | Кошик |
+|:---:|:---:|:---:|
+| <img src="ПОСИЛАННЯ_НА_КАРТИНКУ_1" width="300" /> | <img src="ПОСИЛАННЯ_НА_КАРТИНКУ_2" width="150" /> | <img src="ПОСИЛАННЯ_НА_КАРТИНКУ_3" width="300" /> |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📂 Структура проекту
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```text
+src/
+├── assets/          # Зображення, іконки та глобальні стилі
+├── components/      # Перевикористовувані UI компоненти (Button, Header, Card)
+├── screens/         # Сторінки додатку (Home, Cart, AboutUs, NotFound)
+├── store/           # Redux: slices та конфігурація store
+├── hooks/           # Кастомні хуки (useAuth, etc.)
+├── firebase.js      # Конфігурація Firebase
+├── App.js           # Головний компонент та роутинг
+└── index.js         # Точка входу
