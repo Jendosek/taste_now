@@ -1,0 +1,235 @@
+.reviews-section {
+    padding: 0px 100px;
+    margin-bottom: 100px;
+}
+
+.reviews-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.4;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.highlight {
+    color: #F72D57;
+}
+
+.review-form-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+    margin-bottom: 50px;
+}
+
+.review-form-card h3 {
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.form-row input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.form-row input:focus {
+    border-color: #F72D57;
+    outline: none;
+}
+
+.textarea-style:focus {
+    border-color: #F72D57;
+    outline: none;
+}
+
+.form-row input::placeholder, .textarea-style::placeholder {
+    color: #777;
+}
+
+.rating-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.star-rating-input input[type="radio"] {
+    display: none;
+}
+
+.star-rating-input .star {
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.textarea-style {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px 20px 20px 15px;
+    color: #3f3f3f;
+    font-size: 16px;
+    outline: none;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.btn-submit-review {
+    background-color: #F72D57;
+    /* align-self: start; */
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit-review:hover {
+    background-color: #d11a40;
+}
+
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.review-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #F72D57;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.reviewer-avatar {
+    width: 45px;
+    height: 45px;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.reviewer-info h4 {
+    margin: 0;
+    color: #333;
+    font-size: 16px;
+}
+
+.review-date {
+    margin-left: auto;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+}
+
+.review-text {
+    color: #3f3f3f;
+    line-height: 1.5;
+    margin: 0;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .reviews-section {
+        padding: 0 20px;
+        margin-top: -10px;
+        margin-bottom: 60px;
+    }
+
+    .reviews-title {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .review-form-card {
+        padding: 20px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .form-row input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .rating-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .btn-submit-review {
+        width: 100%;
+        display: block;
+        margin-top: 10px;
+    }
+
+    .review-card {
+        padding: 15px;
+    }
+
+    .review-header {
+        align-items: flex-start;
+    }
+
+    .reviewer-avatar {
+        flex-shrink: 0;
+    }
+
+    .reviewer-info {
+        flex: 1;
+        margin-right: 10px;
+    }
+
+    .review-date {
+        font-size: 12px;
+        white-space: nowrap;
+    }
+}
