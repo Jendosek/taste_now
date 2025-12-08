@@ -6,11 +6,12 @@
         "description": "Classic favorite with spicy pepperoni, mozzarella, and tomato sauce.",
         "price": 11.99,
         "rating": 5,
-        "imageUrl": "/products/pepperoni_pizza.png",
+        "imageUrl": "/products/pizzas/pepperoni_pizza.png",
         "availableToppings": [
             { "name": "Extra Mozzarella", "price": 2.00 },
             { "name": "Hot Chili Peppers", "price": 0.50 },
-            { "name": "BBQ Sauce", "price": 1.00 }
+            { "name": "BBQ Sauce", "price": 1.00 },
+            { "name": "Garlic Dip", "price": 1.00 }
         ]
     },
     {
@@ -20,7 +21,7 @@
         "description": "A hearty feast with bacon, ham, spicy sausages, and premium salami.",
         "price": 13.99,
         "rating": 4.5,
-        "imageUrl": "/products/meat_pizza.png",
+        "imageUrl": "/products/pizzas/meat_pizza.png",
         "availableToppings": [
             { "name": "Jalapeños", "price": 1.00 },
             { "name": "Red Onion", "price": 0.50 },
@@ -34,11 +35,10 @@
         "description": "Fresh bell peppers, sun-ripened tomatoes, olives, and mushrooms.",
         "price": 12.99,
         "rating": 4.3,
-        "imageUrl": "/products/vegetarian_pizza.png",
+        "imageUrl": "/products/pizzas/vegetarian_pizza.png",
         "availableToppings": [
             { "name": "Sweet Corn", "price": 1.00 },
-            { "name": "Feta Cheese", "price": 2.00 },
-            { "name": "Fresh Arugula", "price": 1.00 }
+            { "name": "Feta Cheese", "price": 2.00 }
         ]
     },
     {
@@ -48,7 +48,7 @@
         "description": "Exquisite taste with feta cheese, black olives, cherry tomatoes, and spinach.",
         "price": 15.99,
         "rating": 4.0,
-        "imageUrl": "/products/mediterranean_pizza.png",
+        "imageUrl": "/products/pizzas/mediterranean_pizza.png",
         "availableToppings": [
             { "name": "Sun-dried Tomatoes", "price": 2.00 },
             { "name": "Parmesan", "price": 2.50 },
@@ -62,11 +62,12 @@
         "description": "Authentic Italian style with fresh basil, mozzarella di bufala, and rich tomato sauce.",
         "price": 10.99,
         "rating": 4.8,
-        "imageUrl": "/products/margherita_pizza.png",
+        "imageUrl": "/products/pizzas/margherita_pizza.png",
         "availableToppings": [
             { "name": "Extra Basil", "price": 0.50 },
             { "name": "Cherry Tomatoes", "price": 1.00 },
-            { "name": "Olive Oil", "price": 0.50 }
+            { "name": "Olive Oil", "price": 0.50 },
+            { "name": "Buffalo Mozzarella", "price": 2.00 }
         ]
     },
     {
@@ -76,11 +77,10 @@
         "description": "A sweet and savory mix of tender ham and juicy pineapple chunks.",
         "price": 12.49,
         "rating": 4.2,
-        "imageUrl": "/products/hawaiian_pizza.png",
+        "imageUrl": "/products/pizzas/hawaiian_pizza.png",
         "availableToppings": [
             { "name": "Extra Pineapple", "price": 1.00 },
-            { "name": "Bacon", "price": 1.50 },
-            { "name": "Extra Cheese", "price": 2.00 }
+            { "name": "Bacon", "price": 1.50 }
         ]
     },
     {
@@ -90,11 +90,13 @@
         "description": "Grilled chicken breast, red onions, and sweet corn topped with smoky BBQ sauce.",
         "price": 14.99,
         "rating": 4.7,
-        "imageUrl": "/products/bbq_chicken_pizza.png",
+        "imageUrl": "/products/pizzas/bbq_chicken_pizza.png",
         "availableToppings": [
             { "name": "Cheddar Cheese", "price": 1.50 },
             { "name": "Bacon", "price": 1.50 },
-            { "name": "Ranch Drizzle", "price": 0.50 }
+            { "name": "Ranch Drizzle", "price": 0.50 },
+            { "name": "Jalapeños", "price": 0.50 },
+            { "name": "Onion Rings", "price": 1.00 }
         ]
     },
     {
@@ -104,7 +106,7 @@
         "description": "A cheese lover's dream: Mozzarella, Gorgonzola, Parmesan, and Fontina.",
         "price": 13.49,
         "rating": 4.6,
-        "imageUrl": "/products/four_cheese_pizza.png",
+        "imageUrl": "/products/pizzas/four_cheese_pizza.jpeg",
         "availableToppings": [
             { "name": "Honey", "price": 1.00 },
             { "name": "Walnuts", "price": 1.50 },
@@ -118,11 +120,12 @@
         "description": "For those who like it hot: Spicy salami, crushed chili flakes, and black olives.",
         "price": 13.99,
         "rating": 4.5,
-        "imageUrl": "/products/diavola_pizza.png",
+        "imageUrl": "/products/pizzas/diavola_pizza.png",
         "availableToppings": [
             { "name": "Extra Chili", "price": 0.50 },
             { "name": "Red Onion", "price": 0.50 },
-            { "name": "Garlic Oil", "price": 0.50 }
+            { "name": "Garlic Oil", "price": 0.50 },
+            { "name": "Spicy Honey", "price": 1.00 }
         ]
     },
     {
@@ -132,11 +135,10 @@
         "description": "Fresh catch from the sea including shrimp, calamari rings, and mussels.",
         "price": 16.99,
         "rating": 4.4,
-        "imageUrl": "/products/seafood_pizza.png",
+        "imageUrl": "/products/pizzas/seafood_pizza.png",
         "availableToppings": [
             { "name": "Lemon Wedge", "price": 0.00 },
-            { "name": "Garlic Sauce", "price": 1.00 },
-            { "name": "Capers", "price": 1.00 }
+            { "name": "Garlic Sauce", "price": 1.00 }
         ]
     },
     {
@@ -146,11 +148,13 @@
         "description": "Creamy white sauce base with crispy bacon, parmesan, and a hint of garlic.",
         "price": 14.49,
         "rating": 4.3,
-        "imageUrl": "/products/carbonara_pizza.png",
+        "imageUrl": "/products/pizzas/carbonara_pizza.png",
         "availableToppings": [
             { "name": "Egg", "price": 1.00 },
             { "name": "Black Pepper", "price": 0.00 },
-            { "name": "Mushrooms", "price": 1.50 }
+            { "name": "Mushrooms", "price": 1.50 },
+            { "name": "Pecorino Cheese", "price": 1.50 },
+            { "name": "Parsley", "price": 0.50 }
         ]
     },
     {
@@ -160,7 +164,7 @@
         "description": "Thinly sliced cured prosciutto ham topped with fresh arugula and parmesan shavings.",
         "price": 15.49,
         "rating": 4.9,
-        "imageUrl": "/products/prosciutto_pizza.png",
+        "imageUrl": "/products/pizzas/prosciutto_pizza.png",
         "availableToppings": [
             { "name": "Balsamic Glaze", "price": 1.00 },
             { "name": "Cherry Tomatoes", "price": 1.00 },
@@ -174,11 +178,12 @@
         "description": "Spicy minced beef, kidney beans, sweet corn, red peppers, and jalapeños.",
         "price": 14.99,
         "rating": 4.2,
-        "imageUrl": "/products/mexicana_pizza.png",
+        "imageUrl": "/products/pizzas/mexicana_pizza.png",
         "availableToppings": [
             { "name": "Nachos", "price": 1.50 },
             { "name": "Sour Cream", "price": 1.00 },
-            { "name": "Guacamole", "price": 2.00 }
+            { "name": "Guacamole", "price": 2.00 },
+            { "name": "Cheddar", "price": 1.50 }
         ]
     },
     {
@@ -188,11 +193,13 @@
         "description": "A rich blend of ham, artichokes, mushrooms, and black olives.",
         "price": 13.99,
         "rating": 4.4,
-        "imageUrl": "/products/capricciosa_pizza.png",
+        "imageUrl": "/products/pizzas/capricciosa_pizza.png",
         "availableToppings": [
             { "name": "Boiled Egg", "price": 1.00 },
             { "name": "Anchovies", "price": 1.50 },
-            { "name": "Capers", "price": 1.00 }
+            { "name": "Capers", "price": 1.00 },
+            { "name": "Oregano", "price": 0.50 },
+            { "name": "Extra Ham", "price": 1.50 }
         ]
     },
     {
@@ -202,11 +209,10 @@
         "description": "Gourmet white pizza with creamy truffle sauce, wild mushrooms, and thyme.",
         "price": 16.49,
         "rating": 4.8,
-        "imageUrl": "/products/truffle_pizza.png",
+        "imageUrl": "/products/pizzas/truffle_pizza.jpeg",
         "availableToppings": [
             { "name": "Truffle Oil", "price": 1.50 },
-            { "name": "Parmesan", "price": 2.50 },
-            { "name": "Parsley", "price": 0.50 }
+            { "name": "Parmesan", "price": 2.50 }
         ]
     },
     {
@@ -216,179 +222,388 @@
         "description": "Spicy buffalo chicken strips paired with a cool and creamy ranch drizzle.",
         "price": 13.99,
         "rating": 4.1,
-        "imageUrl": "/products/buffalo_pizza.png",
+        "imageUrl": "/products/pizzas/buffalo_pizza.jpg",
         "availableToppings": [
             { "name": "Blue Cheese", "price": 2.00 },
             { "name": "Celery Sticks", "price": 0.50 },
-            { "name": "Hot Sauce", "price": 0.50 }
+            { "name": "Hot Sauce", "price": 0.50 },
+            { "name": "Extra Chicken", "price": 2.00 }
         ]
     },
     {
         "id": "b1",
         "category": "burgers",
-        "title": "Cheese Burger",
-        "description": "Classic Beef",
+        "title": "Classic Cheese Burger",
+        "description": "Juicy 100% beef patty topped with melted cheddar, crisp lettuce, tomato, and pickles.",
         "price": 8.99,
         "rating": 4.8,
-        "imageUrl": "/products/burger.png",
+        "imageUrl": "/products/burgers/burger_cheese.png",
         "availableToppings": [
-            { "name": "Extra Cheese", "price": 1.00 },
-            { "name": "Bacon", "price": 1.50 },
-            { "name": "Cucumber", "price": 2.00 }
+            { "name": "Extra Patty", "price": 2.50 },
+            { "name": "Grilled Onions", "price": 0.50 },
+            { "name": "Secret Sauce", "price": 0.50 },
+            { "name": "Extra Pickles", "price": 0.50 }
         ]
     },
     {
         "id": "b2",
         "category": "burgers",
-        "title": "Bacon Burger",
-        "description": "With Crispy Bacon",
+        "title": "Bacon Deluxe",
+        "description": "Smoky crispy bacon strips, American cheese, and house sauce on a toasted brioche bun.",
         "price": 9.99,
         "rating": 4.6,
-        "imageUrl": "/products/burger.png",
+        "imageUrl": "/products/burgers/burger_bacon.png",
         "availableToppings": [
-            { "name": "Extra Cheese", "price": 1.00 },
-            { "name": "Bacon", "price": 1.50 },
-            { "name": "Cucumber", "price": 2.00 }
+            { "name": "Extra Bacon", "price": 1.50 },
+            { "name": "Fried Egg", "price": 1.00 },
+            { "name": "BBQ Sauce", "price": 0.50 }
         ]
     },
     {
         "id": "b3",
         "category": "burgers",
-        "title": "Mushroom Burger",
-        "description": "With Sautéed Mushrooms",
+        "title": "Mushroom Swiss",
+        "description": "Savory sautéed wild mushrooms, caramelized onions, and melted Swiss cheese.",
         "price": 10.49,
         "rating": 4.4,
-        "imageUrl": "/products/burger.png",
+        "imageUrl": "/products/burgers/burger_mushroom.png",
         "availableToppings": [
-            { "name": "Extra Cheese", "price": 1.00 },
-            { "name": "Bacon", "price": 1.50 },
-            { "name": "Cucumber", "price": 2.00 }
+            { "name": "Truffle Mayo", "price": 1.00 },
+            { "name": "Extra Swiss Cheese", "price": 1.00 }
         ]
     },
     {
         "id": "b4",
         "category": "burgers",
-        "title": "Meat Burger",
-        "description": "Double Beef Patty",
+        "title": "Double Meat Stack",
+        "description": "Two quarter-pound beef patties, double cheese, and pickles for the ultimate hunger.",
         "price": 11.99,
         "rating": 4.2,
-        "imageUrl": "/products/burger.png",
+        "imageUrl": "/products/burgers/burger_double.png",
         "availableToppings": [
-            { "name": "Extra Cheese", "price": 1.00 },
+            { "name": "Triple Patty", "price": 2.50 },
+            { "name": "Cheese Sauce", "price": 1.00 },
+            { "name": "Jalapeños", "price": 0.50 },
+            { "name": "Onion Rings", "price": 1.50 },
+            { "name": "Bacon", "price": 1.50 }
+        ]
+    },
+    {
+        "id": "b5",
+        "category": "burgers",
+        "title": "Crispy Chicken",
+        "description": "Golden fried chicken breast with creamy mayonnaise and crunchy pickles.",
+        "price": 9.49,
+        "rating": 4.7,
+        "imageUrl": "/products/burgers/burger_chicken.png",
+        "availableToppings": [
+            { "name": "Spicy Buffalo Sauce", "price": 0.50 },
+            { "name": "Coleslaw", "price": 1.00 },
+            { "name": "Cheddar Cheese", "price": 1.00 },
+            { "name": "Ranch", "price": 0.50 }
+        ]
+    },
+    {
+        "id": "b6",
+        "category": "burgers",
+        "title": "Veggie Delight",
+        "description": "Plant-based patty served with fresh avocado, spinach, and vegan garlic aioli.",
+        "price": 10.99,
+        "rating": 4.5,
+        "imageUrl": "/products/burgers/burger_veggie.png",
+        "availableToppings": [
+            { "name": "Vegan Cheese", "price": 1.50 },
+            { "name": "Hummus", "price": 1.00 },
+            { "name": "Roasted Peppers", "price": 1.00 },
+            { "name": "Avocado Slices", "price": 1.50 }
+        ]
+    },
+    {
+        "id": "b7",
+        "category": "burgers",
+        "title": "BBQ Rodeo",
+        "description": "Beef patty topped with crispy onion rings, cheddar cheese, and smoky BBQ sauce.",
+        "price": 11.49,
+        "rating": 4.6,
+        "imageUrl": "/products/burgers/burger_bbq.png",
+        "availableToppings": [
+            { "name": "Extra Onion Rings", "price": 1.50 },
             { "name": "Bacon", "price": 1.50 },
-            { "name": "Cucumber", "price": 2.00 }
+            { "name": "Ranch Dressing", "price": 0.50 },
+            { "name": "Jalapeños", "price": 0.50 },
+            { "name": "Double Cheese", "price": 1.00 }
+        ]
+    },
+    {
+        "id": "b8",
+        "category": "burgers",
+        "title": "Spicy Jalapeño",
+        "description": "Fire-roasted jalapeños, pepper jack cheese, and spicy chipotle mayo.",
+        "price": 10.99,
+        "rating": 4.3,
+        "imageUrl": "/products/burgers/burger_spicy.png",
+        "availableToppings": [
+            { "name": "Ghost Pepper Sauce", "price": 0.50 },
+            { "name": "Sour Cream", "price": 0.50 }
+        ]
+    },
+    {
+        "id": "b9",
+        "category": "burgers",
+        "title": "Blue Cheese Gourmet",
+        "description": "Premium beef patty topped with crumbled blue cheese, caramelized onions, and balsamic glaze.",
+        "price": 12.99,
+        "rating": 4.8,
+        "imageUrl": "/products/burgers/burger_blue.png",
+        "availableToppings": [
+            { "name": "Walnuts", "price": 1.00 },
+            { "name": "Pear Slices", "price": 1.00 },
+            { "name": "Honey", "price": 0.50 },
+            { "name": "Arugula", "price": 0.50 }
+        ]
+    },
+    {
+        "id": "b10",
+        "category": "burgers",
+        "title": "Fish Fillet",
+        "description": "Crispy breaded white fish fillet with tartar sauce and a slice of American cheese.",
+        "price": 9.99,
+        "rating": 4.1,
+        "imageUrl": "/products/burgers/burger_fish.png",
+        "availableToppings": [
+            { "name": "Extra Tartar", "price": 0.50 },
+            { "name": "Pickles", "price": 0.50 },
+            { "name": "Cole Slaw", "price": 1.00 }
+        ]
+    },
+    {
+        "id": "b11",
+        "category": "burgers",
+        "title": "Breakfast Burger",
+        "description": "The perfect hangover cure: Beef patty, fried egg, hash brown, and bacon.",
+        "price": 11.99,
+        "rating": 4.9,
+        "imageUrl": "/products/burgers/burger_breakfast.png",
+        "availableToppings": [
+            { "name": "Maple Syrup", "price": 0.50 },
+            { "name": "Sausage Patty", "price": 2.00 },
+            { "name": "Hot Sauce", "price": 0.50 },
+            { "name": "Ketchup", "price": 0.00 },
+            { "name": "Extra Hash Brown", "price": 1.50 }
+        ]
+    },
+    {
+        "id": "b12",
+        "category": "burgers",
+        "title": "California Burger",
+        "description": "Fresh and light: Guacamole, Monterey Jack cheese, alfalfa sprouts, and tomato.",
+        "price": 11.49,
+        "rating": 4.6,
+        "imageUrl": "/products/burgers/burger_california.png",
+        "availableToppings": [
+            { "name": "Turkey Patty Swap", "price": 0.00 },
+            { "name": "Extra Guacamole", "price": 1.50 }
         ]
     },
     {
         "id": "s1",
         "category": "salads",
-        "title": "Ceasar Salad",
-        "description": "With Grilled Chicken",
+        "title": "Classic Caesar",
+        "description": "Crisp romaine lettuce tossed in creamy Caesar dressing, topped with parmesan shavings and crunchy croutons.",
         "price": 9.99,
         "rating": 4.8,
-        "imageUrl": "/products/salad.png",
+        "imageUrl": "/products/salads/salad_caesar.png",
         "availableToppings": [
-            { "name": "Extra Croutons", "price": 1.00 },
-            { "name": "Parmesan Cheese", "price": 1.50 },
-            { "name": "Bacon Bits", "price": 2.00 }
+            { "name": "Grilled Chicken", "price": 2.50 },
+            { "name": "Anchovies", "price": 1.00 },
+            { "name": "Extra Croutons", "price": 0.50 }
         ]
     },
     {
         "id": "s2",
         "category": "salads",
         "title": "Greek Salad",
-        "description": "With Feta Cheese",
+        "description": "A refreshing mix of cucumber, tomatoes, Kalamata olives, red onion, and block feta cheese with olive oil.",
         "price": 8.99,
         "rating": 4.5,
-        "imageUrl": "/products/salad.png",
+        "imageUrl": "/products/salads/salad_greek.png",
         "availableToppings": [
-            { "name": "Extra Feta", "price": 1.00 },
-            { "name": "Olives", "price": 1.50 },
-            { "name": "Cucumber", "price": 2.00 }
+            { "name": "Extra Feta", "price": 1.50 },
+            { "name": "Oregano Sprinkle", "price": 0.00 },
+            { "name": "Warm Pita Bread", "price": 1.00 },
+            { "name": "Stuffed Vine Leaves", "price": 2.00 }
         ]
     },
     {
         "id": "s3",
         "category": "salads",
-        "title": "Garden Salad",
-        "description": "Fresh Vegetables",
+        "title": "Fresh Garden",
+        "description": "Seasonal mixed greens with cherry tomatoes, cucumber slices, shredded carrots, and vinaigrette.",
         "price": 7.99,
         "rating": 4.3,
-        "imageUrl": "/products/salad.png",
+        "imageUrl": "/products/salads/salad_garden.png",
         "availableToppings": [
-            { "name": "Avocado", "price": 1.00 },
-            { "name": "Nuts", "price": 1.50 },
-            { "name": "Cheese", "price": 2.00 }
+            { "name": "Avocado Half", "price": 1.50 },
+            { "name": "Sunflower Seeds", "price": 0.50 }
         ]
     },
     {
         "id": "s4",
         "category": "salads",
         "title": "Cobb Salad",
-        "description": "With Avocado and Bacon",
+        "description": "Hearty rows of grilled chicken, hard-boiled egg, avocado, bacon, and blue cheese on a bed of greens.",
         "price": 10.49,
         "rating": 4.1,
-        "imageUrl": "/products/salad.png",
+        "imageUrl": "/products/salads/salad_cobb.png",
         "availableToppings": [
-            { "name": "Avocado", "price": 1.00 },
-            { "name": "Bacon Bits", "price": 1.50 },
-            { "name": "Cheese", "price": 2.00 }
+            { "name": "Blue Cheese Crumbles", "price": 1.00 },
+            { "name": "Extra Bacon", "price": 1.50 },
+            { "name": "Ranch Dressing", "price": 0.50 }
+        ]
+    },
+    {
+        "id": "s5",
+        "category": "salads",
+        "title": "Caprese",
+        "description": "Slices of ripe tomatoes and fresh buffalo mozzarella, garnished with fresh basil leaves and balsamic glaze.",
+        "price": 11.99,
+        "rating": 4.9,
+        "imageUrl": "/products/salads/salad_caprese.png",
+        "availableToppings": [
+            { "name": "Pesto Sauce", "price": 1.00 },
+            { "name": "Prosciutto", "price": 2.50 },
+            { "name": "Pine Nuts", "price": 1.50 },
+            { "name": "Extra Balsamic", "price": 0.50 },
+            { "name": "Arugula Bed", "price": 1.00 }
+        ]
+    },
+    {
+        "id": "s6",
+        "category": "salads",
+        "title": "Tuna Niçoise",
+        "description": "French Riviera classic with tuna chunks, green beans, boiled potatoes, egg, and olives.",
+        "price": 12.49,
+        "rating": 4.4,
+        "imageUrl": "/products/salads/salad_nicoise.png",
+        "availableToppings": [
+            { "name": "Extra Tuna", "price": 2.00 },
+            { "name": "Anchovies", "price": 1.00 },
+            { "name": "Dijon Dressing", "price": 0.50 }
+        ]
+    },
+    {
+        "id": "s7",
+        "category": "salads",
+        "title": "Asian Sesame Chicken",
+        "description": "Crunchy cabbage slaw, mandarin oranges, toasted almonds, and grilled chicken with sesame ginger dressing.",
+        "price": 10.99,
+        "rating": 4.7,
+        "imageUrl": "/products/salads/salad_asian.png",
+        "availableToppings": [
+            { "name": "Wonton Strips", "price": 0.50 },
+            { "name": "Extra Dressing", "price": 0.50 },
+            { "name": "Spicy Peanuts", "price": 1.00 },
+            { "name": "Cilantro", "price": 0.00 }
+        ]
+    },
+    {
+        "id": "s8",
+        "category": "salads",
+        "title": "Quinoa Superfood",
+        "description": "Nutrient-packed quinoa bowl with kale, roasted chickpeas, avocado, and lemon tahini dressing.",
+        "price": 11.49,
+        "rating": 4.6,
+        "imageUrl": "/products/salads/salad_quinoa.png",
+        "availableToppings": [
+            { "name": "Feta Cheese", "price": 1.50 },
+            { "name": "Grilled Tofu", "price": 2.00 }
         ]
     },
     {
         "id": "c1",
         "category": "combos",
         "title": "Family Combo",
-        "description": "2 Pizzas, 4 Burgers, 2 Salads",
+        "description": "The ultimate family feast: 2 Large Pizzas, 4 Classic Burgers, and 2 Fresh Salads.",
         "price": 49.99,
         "rating": 4.9,
-        "imageUrl": "/products/combos.png",
+        "imageUrl": "/products/combos/family_combo.png",
         "availableToppings": [
-            { "name": "Extra burger", "price": 2.00 },
-            { "name": "Extra fries", "price": 1.50 },
-            { "name": "Doubled ", "price": 0.50 }
+            { "name": "2L Soda Bottle", "price": 2.50 },
+            { "name": "Family Fries", "price": 3.50 },
+            { "name": "Cheesy Garlic Bread", "price": 4.00 }
         ]
     },
     {
         "id": "c2",
         "category": "combos",
         "title": "Couple's Combo",
-        "description": "1 Pizza, 2 Burgers, 1 Salad",
+        "description": "Perfect date night: 1 Medium Pizza, 2 Burgers of choice, and 1 Shared Salad.",
         "price": 29.99,
         "rating": 4.7,
-        "imageUrl": "/products/combos.png",
+        "imageUrl": "/products/combos/couples_combo.png",
         "availableToppings": [
-            { "name": "Extra burger", "price": 2.00 },
-            { "name": "Extra fries", "price": 1.50 },
-            { "name": "Doubled ", "price": 0.50 }
+            { "name": "Chocolate Lava Cake", "price": 4.50 },
+            { "name": "Onion Rings", "price": 2.50 },
+            { "name": "Extra Dipping Sauces", "price": 1.00 },
+            { "name": "Upgrade to Large Pizza", "price": 3.00 }
         ]
     },
     {
         "id": "c3",
         "category": "combos",
         "title": "Party Combo",
-        "description": "3 Pizzas, 6 Burgers, 3 Salads",
+        "description": "Feed the crowd: 3 Large Pizzas, 6 Burgers, 3 Salads, and a bucket of Wings.",
         "price": 69.99,
         "rating": 4.6,
-        "imageUrl": "/products/combos.png",
+        "imageUrl": "/products/combos/party_combo.png",
         "availableToppings": [
-            { "name": "Extra burger", "price": 2.00 },
-            { "name": "Extra fries", "price": 1.50 },
-            { "name": "Doubled ", "price": 0.50 }
+            { "name": "Extra Pizza", "price": 8.00 },
+            { "name": "Spicy Wings (10pcs)", "price": 6.50 },
+            { "name": "Nachos Platter", "price": 5.00 },
+            { "name": "Extra Drink Pack", "price": 4.00 },
+            { "name": "Mozzarella Sticks", "price": 3.50 }
         ]
     },
     {
         "id": "c4",
         "category": "combos",
         "title": "Lunch Combo",
-        "description": "1 Burger, 1 Salad, Drink",
+        "description": "Quick and satisfying: 1 Burger, 1 Side Salad, and a soft drink.",
         "price": 14.99,
         "rating": 4.4,
-        "imageUrl": "/products/combos.png",
+        "imageUrl": "/products/combos/lunch_combo.png",
         "availableToppings": [
-            { "name": "Extra burger", "price": 2.00 },
-            { "name": "Extra fries", "price": 1.50 },
-            { "name": "Doubled ", "price": 0.50 }
+            { "name": "Upgrade to Beer", "price": 2.00 },
+            { "name": "Cookie", "price": 1.00 },
+            { "name": "Extra Cheese Slice", "price": 0.50 }
+        ]
+    },
+    {
+        "id": "c5",
+        "category": "combos",
+        "title": "Movie Night Box",
+        "description": "Relax and enjoy: 1 Large Pepperoni Pizza, Garlic Knots, Popcorn Chicken, and 2 Drinks.",
+        "price": 24.99,
+        "rating": 4.8,
+        "imageUrl": "/products/combos/night_combo.png",
+        "availableToppings": [
+            { "name": "Brownie", "price": 2.50 },
+            { "name": "Extra Garlic Sauce", "price": 0.50 },
+            { "name": "Jalapeño Poppers", "price": 3.50 },
+            { "name": "Upgrade to XL Pizza", "price": 2.50 }
+        ]
+    },
+    {
+        "id": "c6",
+        "category": "combos",
+        "title": "Game Day Feast",
+        "description": "Victory tastes good: 4 Loaded Burgers, 20 Wings, Loaded Fries, and 4 Sodas.",
+        "price": 59.99,
+        "rating": 4.9,
+        "imageUrl": "/products/combos/game_combo.png",
+        "availableToppings": [
+            { "name": "Blue Cheese Dip", "price": 1.00 },
+            { "name": "Extra Bacon on Burgers", "price": 4.00 }
         ]
     }
 ]

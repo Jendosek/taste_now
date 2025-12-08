@@ -85,7 +85,7 @@ const Cart = () => {
                                         <div className="item-toppings">
                                             {item.selectedToppings.map((topping, index) => (
                                                 <span key={index} className="topping-tag">
-                                                    + {topping.name}
+                                                    + {topping.name}⠀
                                                 </span>
                                             ))}
                                         </div>

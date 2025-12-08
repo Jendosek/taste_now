@@ -108,13 +108,14 @@
 .product-title {
     font-size: 16px;
     font-weight: 500;
-    margin-top: 0;
+    margin-top: 10px;
     margin-bottom: 10px;
     color: #222;
 }
 
 .product-desc {
     font-size: 14px;
+    height: 55px;
     color: #888;
     margin-top: 0;
     margin: 0 auto;
