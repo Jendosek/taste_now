@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { addItem } from '../../features/cartSlice';
 import productsData from '../../assets/data/home/products.json';
 import { Pagination, Navigation } from 'swiper/modules';
 import { FaPizzaSlice, FaHamburger, FaUtensils } from "react-icons/fa";
+import { RiArrowRightWideLine, RiArrowLeftWideLine } from "react-icons/ri";
 import { PiBowlFood } from "react-icons/pi";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import ProductCard from './ProductCard';
@@ -13,6 +14,7 @@ import './style.css';
 
 const PopularCategories = () => {
     const dispatch = useDispatch();
+    const swiperRef = useRef(null);
     const [activeCategory, setActiveCategory] = useState('pizzas');
 
     const categories = [
@@ -54,6 +56,7 @@ const PopularCategories = () => {
         <div className="popular-categories-section">
             <h2 className="section-title-categories">Our Popular <span>Categories</span></h2>
 
+
             <div className="categories-tabs">
                 {categories.map((category) => (
                     <button
@@ -66,60 +69,60 @@ const PopularCategories = () => {
                 ))}
             </div>
 
-            <div className="products-slider-container">
-                <Swiper
-                    modules={[Navigation, Pagination]}
-                    pagination={{ clickable: true, dynamicBullets: true }}
-                    key={activeCategory}
-                    spaceBetween={20}
-                    slidesPerView={1}
+            <div className="products-slider-wrapper" style={{position: 'relative'}}>
+                <button 
+                    className="slider-arrow arrow-prev" 
+                    onClick={() => swiperRef.current?.slidePrev()}>
+                        <RiArrowLeftWideLine size={40} />
+                </button>
 
-                    breakpoints={{
-                        576: { slidesPerView: 2 },
-                        768: { slidesPerView: 3 },
-                        1200: { slidesPerView: 4 },
-                    }}>
-                    {currentProducts.map((product) => (
-                        <SwiperSlide key={product.id}>
-                            <ProductCard product={product} />
-                            {/* <div className="product-card">
-                                <div className="product-image">
-                                    <img src={product.imageUrl} alt={product.title} />
-                                    {product.rating && <span className="rating">★ {product.rating}</span>}
-                                </div>
+                <div className="products-slider-container">
+                    <Swiper
+                        modules={[Navigation, Pagination]}
+                        pagination={{ clickable: true, dynamicBullets: true }}
+                        onBeforeInit={(swiper) => {
+                            swiperRef.current = swiper;
+                        }}
+                        key={activeCategory}
+                        spaceBetween={20}
+                        slidesPerView={1}
+                        loop={true}
 
-                                <h3 className="product-title">{product.title}</h3>
-                                <p className="product-desc">{product.description}</p>
-
-                                <div className="product-footer">
-                                    <span className="price">${product.price}</span>
-                                    <button
-                                        className="add-btn"
-                                        onClick={() => handleAddToCart(product)}>
-                                        Add to cart
-                                    </button>
-                                </div>
-                            </div> */}
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-                <div className="category-navigation">
-                    <button onClick={handlePrev} className="nav-arrow prev">
-                    </button>
-
-                    <div className="slider-pagination">
-                        {categories.map((category) => (
-                            <span
-                                key={category.id}
-                                className={`pagination-dot ${activeCategory === category.id ? 'active' : ''}`}
-                                onClick={() => setActiveCategory(category.id)}
-                            ></span>
+                        breakpoints={{
+                            576: { slidesPerView: 2 },
+                            768: { slidesPerView: 3 },
+                            1200: { slidesPerView: 4 },
+                        }}>
+                        {currentProducts.map((product) => (
+                            <SwiperSlide key={product.id}>
+                                <ProductCard product={product} />
+                            </SwiperSlide>
                         ))}
-                    </div>
+                    </Swiper>
+                    <div className="category-navigation">
+                        <button onClick={handlePrev} className="nav-arrow prev">
+                        </button>
 
-                    <button onClick={handleNext} className="nav-arrow next">
-                    </button>
+                        <div className="slider-pagination">
+                            {categories.map((category) => (
+                                <span
+                                    key={category.id}
+                                    className={`pagination-dot ${activeCategory === category.id ? 'active' : ''}`}
+                                    onClick={() => setActiveCategory(category.id)}
+                                ></span>
+                            ))}
+                        </div>
+
+                        <button onClick={handleNext} className="nav-arrow next">
+                        </button>
+                    </div>
                 </div>
+
+                <button 
+                    className="slider-arrow arrow-next" 
+                    onClick={() => swiperRef.current?.slideNext()}>
+                    <RiArrowRightWideLine size={40} />
+                </button>
             </div>
         </div>
     );

@@ -56,6 +56,174 @@
         ]
     },
     {
+        "id": "p5",
+        "category": "pizzas",
+        "title": "Margherita Pizza",
+        "description": "Authentic Italian style with fresh basil, mozzarella di bufala, and rich tomato sauce.",
+        "price": 10.99,
+        "rating": 4.8,
+        "imageUrl": "/products/margherita_pizza.png",
+        "availableToppings": [
+            { "name": "Extra Basil", "price": 0.50 },
+            { "name": "Cherry Tomatoes", "price": 1.00 },
+            { "name": "Olive Oil", "price": 0.50 }
+        ]
+    },
+    {
+        "id": "p6",
+        "category": "pizzas",
+        "title": "Hawaiian Pizza",
+        "description": "A sweet and savory mix of tender ham and juicy pineapple chunks.",
+        "price": 12.49,
+        "rating": 4.2,
+        "imageUrl": "/products/hawaiian_pizza.png",
+        "availableToppings": [
+            { "name": "Extra Pineapple", "price": 1.00 },
+            { "name": "Bacon", "price": 1.50 },
+            { "name": "Extra Cheese", "price": 2.00 }
+        ]
+    },
+    {
+        "id": "p7",
+        "category": "pizzas",
+        "title": "BBQ Chicken Pizza",
+        "description": "Grilled chicken breast, red onions, and sweet corn topped with smoky BBQ sauce.",
+        "price": 14.99,
+        "rating": 4.7,
+        "imageUrl": "/products/bbq_chicken_pizza.png",
+        "availableToppings": [
+            { "name": "Cheddar Cheese", "price": 1.50 },
+            { "name": "Bacon", "price": 1.50 },
+            { "name": "Ranch Drizzle", "price": 0.50 }
+        ]
+    },
+    {
+        "id": "p8",
+        "category": "pizzas",
+        "title": "Quattro Formaggi",
+        "description": "A cheese lover's dream: Mozzarella, Gorgonzola, Parmesan, and Fontina.",
+        "price": 13.49,
+        "rating": 4.6,
+        "imageUrl": "/products/four_cheese_pizza.png",
+        "availableToppings": [
+            { "name": "Honey", "price": 1.00 },
+            { "name": "Walnuts", "price": 1.50 },
+            { "name": "Pear Slices", "price": 1.50 }
+        ]
+    },
+    {
+        "id": "p9",
+        "category": "pizzas",
+        "title": "Diavola Pizza",
+        "description": "For those who like it hot: Spicy salami, crushed chili flakes, and black olives.",
+        "price": 13.99,
+        "rating": 4.5,
+        "imageUrl": "/products/diavola_pizza.png",
+        "availableToppings": [
+            { "name": "Extra Chili", "price": 0.50 },
+            { "name": "Red Onion", "price": 0.50 },
+            { "name": "Garlic Oil", "price": 0.50 }
+        ]
+    },
+    {
+        "id": "p10",
+        "category": "pizzas",
+        "title": "Seafood Deluxe",
+        "description": "Fresh catch from the sea including shrimp, calamari rings, and mussels.",
+        "price": 16.99,
+        "rating": 4.4,
+        "imageUrl": "/products/seafood_pizza.png",
+        "availableToppings": [
+            { "name": "Lemon Wedge", "price": 0.00 },
+            { "name": "Garlic Sauce", "price": 1.00 },
+            { "name": "Capers", "price": 1.00 }
+        ]
+    },
+    {
+        "id": "p11",
+        "category": "pizzas",
+        "title": "Carbonara Pizza",
+        "description": "Creamy white sauce base with crispy bacon, parmesan, and a hint of garlic.",
+        "price": 14.49,
+        "rating": 4.3,
+        "imageUrl": "/products/carbonara_pizza.png",
+        "availableToppings": [
+            { "name": "Egg", "price": 1.00 },
+            { "name": "Black Pepper", "price": 0.00 },
+            { "name": "Mushrooms", "price": 1.50 }
+        ]
+    },
+    {
+        "id": "p12",
+        "category": "pizzas",
+        "title": "Prosciutto & Arugula",
+        "description": "Thinly sliced cured prosciutto ham topped with fresh arugula and parmesan shavings.",
+        "price": 15.49,
+        "rating": 4.9,
+        "imageUrl": "/products/prosciutto_pizza.png",
+        "availableToppings": [
+            { "name": "Balsamic Glaze", "price": 1.00 },
+            { "name": "Cherry Tomatoes", "price": 1.00 },
+            { "name": "Pine Nuts", "price": 2.00 }
+        ]
+    },
+    {
+        "id": "p13",
+        "category": "pizzas",
+        "title": "Mexicana",
+        "description": "Spicy minced beef, kidney beans, sweet corn, red peppers, and jalapeños.",
+        "price": 14.99,
+        "rating": 4.2,
+        "imageUrl": "/products/mexicana_pizza.png",
+        "availableToppings": [
+            { "name": "Nachos", "price": 1.50 },
+            { "name": "Sour Cream", "price": 1.00 },
+            { "name": "Guacamole", "price": 2.00 }
+        ]
+    },
+    {
+        "id": "p14",
+        "category": "pizzas",
+        "title": "Capricciosa",
+        "description": "A rich blend of ham, artichokes, mushrooms, and black olives.",
+        "price": 13.99,
+        "rating": 4.4,
+        "imageUrl": "/products/capricciosa_pizza.png",
+        "availableToppings": [
+            { "name": "Boiled Egg", "price": 1.00 },
+            { "name": "Anchovies", "price": 1.50 },
+            { "name": "Capers", "price": 1.00 }
+        ]
+    },
+    {
+        "id": "p15",
+        "category": "pizzas",
+        "title": "Truffle Mushroom",
+        "description": "Gourmet white pizza with creamy truffle sauce, wild mushrooms, and thyme.",
+        "price": 16.49,
+        "rating": 4.8,
+        "imageUrl": "/products/truffle_pizza.png",
+        "availableToppings": [
+            { "name": "Truffle Oil", "price": 1.50 },
+            { "name": "Parmesan", "price": 2.50 },
+            { "name": "Parsley", "price": 0.50 }
+        ]
+    },
+    {
+        "id": "p16",
+        "category": "pizzas",
+        "title": "Buffalo Ranch",
+        "description": "Spicy buffalo chicken strips paired with a cool and creamy ranch drizzle.",
+        "price": 13.99,
+        "rating": 4.1,
+        "imageUrl": "/products/buffalo_pizza.png",
+        "availableToppings": [
+            { "name": "Blue Cheese", "price": 2.00 },
+            { "name": "Celery Sticks", "price": 0.50 },
+            { "name": "Hot Sauce", "price": 0.50 }
+        ]
+    },
+    {
         "id": "b1",
         "category": "burgers",
         "title": "Cheese Burger",
