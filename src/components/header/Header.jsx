@@ -7,11 +7,24 @@ import { logout } from "../../auth/authSlice";
 import { clearCart } from "../../features/cartSlice";
 import { FaUser, FaSignOutAlt, FaBars, FaTimes } from "react-icons/fa";
 import useResponsive from "../../hooks/useResponsive";
+import { useNavigate } from 'react-router-dom';
 import './style.css'
 
 const Header = () => {
     const { user, isAuthenticated } = useSelector((state) => state.auth);
     const dispatch = useDispatch();
+
+    const [isProfileOpen, setIsProfileOpen] = useState(false);
+    const navigate = useNavigate();
+
+    const handleProfileClick = () => {
+        if (isMobile) {
+            navigate('/profile');
+            setIsMenuOpen(false);
+        } else {
+            setIsProfileOpen(!isProfileOpen);
+        }
+    };
 
     const totalQuantity = useSelector((state) => state.cart.totalQuantity);
 
@@ -21,19 +34,24 @@ const Header = () => {
     const handleLogout = () => {
         dispatch(clearCart());
         dispatch(logout());
+        setIsProfileOpen(false);
         setIsMenuOpen(false);
-        // Можна перекинути на логін, або лишитись тут
+        // Можна перекинути на логін
     };
 
-    const closeMenu = () => setIsMenuOpen(false);
+    const closeMenu = () => {
+        setIsMenuOpen(false); 
+        setIsProfileOpen(false); 
+    };
 
     return (
         <header className="header-container">
             <div className="logo-container">
-                <Link to="/">
+                <Link to="/" onClick={closeMenu}>
                     <Logo />
                 </Link>
             </div>
+
             {!isMobile && (
                 <nav className="nav-container">
                     <NavLink to="/" className="nav-link">Home</NavLink>
@@ -53,14 +71,27 @@ const Header = () => {
 
                 {!isMobile && (
                     isAuthenticated ? (
-                        <div className="user-info">
-                            <div className="user-details">
-                                <FaUser size={20} color="#F72D57" />
-                                <span className="user-name">{user.username}</span>
+                        <div className="user-dropdown-container" style={{ position: 'relative' }}>
+                            <div 
+                                className="user-info" 
+                                onClick={handleProfileClick}
+                                style={{ cursor: 'pointer' }}>
+                                <div className="user-details">
+                                    <FaUser size={20} color="#F72D57" />
+                                    <span className="user-name">{user.username}</span>
+                                </div>
                             </div>
-                            <button className="logout-btn" onClick={handleLogout} title="Logout">
-                                <FaSignOutAlt size={24} />
-                            </button>
+
+                            {isProfileOpen && (
+                                <div className="desktop-profile-dropdown">
+                                    <Link to="/profile" onClick={() => setIsProfileOpen(false)}>
+                                        My Profile
+                                    </Link>
+                                    <button onClick={handleLogout} className="btn-profile-logout">
+                                        Logout <FaSignOutAlt />
+                                    </button>
+                                </div>
+                            )}
                         </div>
                     ) : (
                         <Link to="/signup" className="btn-signup">Sign up / in</Link>
@@ -93,7 +124,10 @@ const Header = () => {
                     <div className="mobile-auth-section">
                         {isAuthenticated ? (
                             <>
-                                <div className="mobile-user-info">
+                                <div 
+                                    className="mobile-user-info" 
+                                    onClick={handleProfileClick}
+                                    style={{cursor: 'pointer'}}>
                                     <FaUser size={20} color="#F72D57" />
                                     <span>{user.username}</span>
                                 </div>
@@ -110,7 +144,7 @@ const Header = () => {
                 </div>
             )}
         </header>
-    )
+    );
 }
 
 export default Header;

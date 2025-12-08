@@ -2,11 +2,14 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { addItem, removeItem, clearCart } from '../../features/cartSlice';
+import { createOrder } from '../../auth/orderSlice';
 
 import './style.css';
 
 const Cart = () => {
     const { items, totalPrice } = useSelector((state) => state.cart);
+
+    const { user } = useSelector((state) => state.auth);
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -23,7 +26,19 @@ const Cart = () => {
         dispatch(clearCart());
     };
 
-    const handleCheckout = () => {
+    const handleCheckout = async () => {
+        if (!user) {
+            alert("Please login to place an order");
+            navigate('/login');
+            return;
+        }
+
+        await dispatch(createOrder({
+            userId: user.uid,
+            items: items,
+            totalAmount: totalPrice
+        }));
+
         dispatch(clearCart());
         navigate('/success');
     };

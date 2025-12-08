@@ -11,6 +11,7 @@ import SignUp from './screens/auth/SignUp'
 import Login from './screens/auth/Login';
 import Cart from './screens/cart/Cart';
 import Success from './screens/success/Success';
+import Profile from './screens/profile/Profile';
 
 import NotFound from './screens/notFound/NotFound'
 
@@ -26,6 +27,7 @@ function App() {
           <Route path='contact' element={<ContactUs />} />
           <Route path='cart' element={<Cart />} />
           <Route path='success' element={<Success />} />
+          <Route path="profile" element={<Profile />} />
           <Route path='*' element={<NotFound />} />
         </Route>
         <Route path='signup' element={<SignUp />} />

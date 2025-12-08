@@ -140,6 +140,45 @@
   display: none;
 }
 
+.desktop-profile-dropdown {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    width: 150px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #eee;
+}
+
+.desktop-profile-dropdown a, 
+.desktop-profile-dropdown button {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.desktop-profile-dropdown a:hover, 
+.desktop-profile-dropdown button:hover {
+    color: #F72D57;
+}
+
+.btn-profile-logout {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 @media (max-width: 768px) {
   .header-container {
     padding: 15px 20px;
