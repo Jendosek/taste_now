@@ -3,56 +3,56 @@
         "id": "p1",
         "category": "pizzas",
         "title": "Pepperoni Pizza",
-        "description": "Di napoles",
+        "description": "Classic favorite with spicy pepperoni, mozzarella, and tomato sauce.",
         "price": 11.99,
         "rating": 5,
         "imageUrl": "/products/pepperoni_pizza.png",
         "availableToppings": [
-            { "name": "Extra Cheese", "price": 2.00 },
-            { "name": "Mushrooms", "price": 1.50 },
-            { "name": "Onion", "price": 0.50 }
+            { "name": "Extra Mozzarella", "price": 2.00 },
+            { "name": "Hot Chili Peppers", "price": 0.50 },
+            { "name": "BBQ Sauce", "price": 1.00 }
         ]
     },
     {
         "id": "p2",
         "category": "pizzas",
         "title": "Meat Pizza",
-        "description": "Di napoles",
+        "description": "A hearty feast with bacon, ham, spicy sausages, and premium salami.",
         "price": 13.99,
         "rating": 4.5,
         "imageUrl": "/products/meat_pizza.png",
         "availableToppings": [
-            { "name": "Extra Cheese", "price": 2.00 },
-            { "name": "Mushrooms", "price": 1.50 },
-            { "name": "Onion", "price": 0.50 }
+            { "name": "Jalapeños", "price": 1.00 },
+            { "name": "Red Onion", "price": 0.50 },
+            { "name": "Mushrooms", "price": 1.50 }
         ]
     },
     {
         "id": "p3",
         "category": "pizzas",
         "title": "Vegetarian Pizza",
-        "description": "Cosa di Mario",
+        "description": "Fresh bell peppers, sun-ripened tomatoes, olives, and mushrooms.",
         "price": 12.99,
         "rating": 4.3,
         "imageUrl": "/products/vegetarian_pizza.png",
         "availableToppings": [
-            { "name": "Extra Cheese", "price": 2.00 },
-            { "name": "Mushrooms", "price": 1.50 },
-            { "name": "Onion", "price": 0.50 }
+            { "name": "Sweet Corn", "price": 1.00 },
+            { "name": "Feta Cheese", "price": 2.00 },
+            { "name": "Fresh Arugula", "price": 1.00 }
         ]
     },
     {
         "id": "p4",
         "category": "pizzas",
         "title": "Mediterranean Pizza",
-        "description": "Milano",
+        "description": "Exquisite taste with feta cheese, black olives, cherry tomatoes, and spinach.",
         "price": 15.99,
         "rating": 4.0,
         "imageUrl": "/products/mediterranean_pizza.png",
         "availableToppings": [
-            { "name": "Extra Cheese", "price": 2.00 },
-            { "name": "Mushrooms", "price": 1.50 },
-            { "name": "Onion", "price": 0.50 }
+            { "name": "Sun-dried Tomatoes", "price": 2.00 },
+            { "name": "Parmesan", "price": 2.50 },
+            { "name": "Pesto Sauce", "price": 1.50 }
         ]
     },
     {

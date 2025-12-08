@@ -52,7 +52,7 @@ const PopularCategories = () => {
 
     return (
         <div className="popular-categories-section">
-            <h2 className="section-title">Our Popular <span>Categories</span></h2>
+            <h2 className="section-title-categories">Our Popular <span>Categories</span></h2>
 
             <div className="categories-tabs">
                 {categories.map((category) => (
