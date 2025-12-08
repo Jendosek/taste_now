@@ -36,7 +36,7 @@ const Header = () => {
         dispatch(logout());
         setIsProfileOpen(false);
         setIsMenuOpen(false);
-        // Можна перекинути на логін
+        // navigate('/login');
     };
 
     const closeMenu = () => {

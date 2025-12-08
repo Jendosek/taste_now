@@ -19,7 +19,8 @@ const Profile = () => {
 
     const handleLogout = () => {
         dispatch(logout());
-        navigate('/login');
+        navigate('/');
+        // navigate('/login');
     };
 
     if (!user) return <div className="profile-container">Please log in</div>;
