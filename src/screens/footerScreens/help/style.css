@@ -1,0 +1,131 @@
+.help-page {
+    padding-top: 70px;
+    padding-bottom: 80px;
+    background-color: #fcfcfc;
+    min-height: 100vh;
+}
+
+.help-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.03);
+}
+
+.help-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.help-title .highlight {
+    color: #F72D57;
+}
+
+.help-subtitle {
+    text-align: center;
+    color: #777;
+    font-size: 18px;
+    margin-bottom: 60px;
+}
+
+.faq-section {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+.faq-item {
+    margin-bottom: 25px;
+}
+
+.faq-item h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.faq-item p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.contact-support-box {
+    margin-top: 60px;
+    padding: 40px;
+    background-color: #FFF0F3; /* Дуже світлий рожевий фон */
+    border-radius: 12px;
+    text-align: center;
+}
+
+.contact-support-box h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-support-box p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.btn-contact-support {
+    display: inline-block;
+    background-color: #F72D57;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-contact-support:hover {
+    background-color: #d6254a;
+}
+
+@media (max-width: 768px) {
+    .help-page {
+        padding-top: 100px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: #fff;
+    }
+
+    .help-container {
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .help-title {
+        font-size: 32px;
+        text-align: left;
+    }
+    
+    .help-subtitle {
+        text-align: left;
+        margin-bottom: 40px;
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .contact-support-box {
+        padding: 30px 20px;
+    }
+}
