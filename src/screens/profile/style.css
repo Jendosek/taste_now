@@ -108,4 +108,8 @@
     .profile-page {
         flex-direction: column;
     }
+
+    .mini-item {
+        gap: 10px
+    }
 }

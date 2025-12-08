@@ -56,7 +56,7 @@ const Profile = () => {
                                                     <div>
                                                         {item.selectedToppings.map((topping, index) => (
                                                             <span key={index}>
-                                                                 + {topping.name}
+                                                                 + {topping.name}⠀
                                                             </span>
                                                         ))}
                                                     </div>
