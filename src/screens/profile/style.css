@@ -7,6 +7,14 @@
     min-height: 80vh;
 }
 
+.profile-container {
+    font-size: 22px;
+    padding: 20px;
+    color: #3f3f3f;
+    text-align: center;
+
+}
+
 .profile-content-name {
     font-size: 26px;
     font-weight: 700;
@@ -105,6 +113,13 @@
 }
 
 @media (max-width: 768px) {
+    .profile-container {
+        font-size: 18px;
+        padding: 20px;
+        color: #3f3f3f;
+        text-align: center;
+    }
+
     .profile-page {
         flex-direction: column;
     }
