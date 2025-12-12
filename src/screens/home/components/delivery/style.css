@@ -81,9 +81,10 @@
     }
 
     .delivery-image img {
-        width: 100%;
+        /* width: 100%; */
         height: auto;
-        max-width: 350px;
+        /* max-width: 350px; */
+        max-width: 390px;
         max-height: none;
     }
     
