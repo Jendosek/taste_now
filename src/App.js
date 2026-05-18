@@ -12,6 +12,7 @@ import Login from './screens/auth/Login';
 import Cart from './screens/cart/Cart';
 import Success from './screens/success/Success';
 import Profile from './screens/profile/Profile';
+import AdminRoute from './screens/admin/AdminRoute';
 import PrivacyPolicy from './screens/footerScreens/privacyPolicy/PrivacyPolicy';
 import TermsOfService from './screens/footerScreens/termsOfService/TermsOfService';
 import Help from './screens/footerScreens/help/Hepl';
@@ -31,6 +32,7 @@ function App() {
           <Route path='cart' element={<Cart />} />
           <Route path='success' element={<Success />} />
           <Route path="profile" element={<Profile />} />
+          <Route path="admin" element={<AdminRoute />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="terms-of-service" element={<TermsOfService />} />
           <Route path="help" element={<Help />} />

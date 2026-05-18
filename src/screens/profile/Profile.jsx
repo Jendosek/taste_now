@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchOrders } from '../../auth/orderSlice';
 import { logout } from '../../auth/authSlice';
 import { useNavigate } from 'react-router-dom';
+import { isAdmin } from '../../utils/isAdmin';
 import './style.css';
 
 const Profile = () => {
@@ -34,6 +35,14 @@ const Profile = () => {
                 <h2 className="profile-content-name">{user.username}</h2>
                 <p className="profile-content-email">{user.email}</p>
                 <button onClick={handleLogout} className="btn-logout-profile">Logout</button>
+                {isAdmin(user) && (
+                    <button
+                        onClick={() => navigate('/admin')}
+                        className="btn-admin-profile"
+                    >
+                        Admin Panel
+                    </button>
+                )}
             </div>
 
             <div className="profile-content">

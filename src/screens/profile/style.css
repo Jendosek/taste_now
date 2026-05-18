@@ -66,6 +66,23 @@
     font-size: 16px;
 }
 
+.btn-admin-profile {
+    margin-top: 12px;
+    padding: 10px 30px;
+    background: #F72D57;
+    border: 1.5px solid #F72D57;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: opacity 0.2s;
+}
+
+.btn-admin-profile:hover {
+    opacity: 0.9;
+}
+
 .profile-content {
     flex: 3;
 }

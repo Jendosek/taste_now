@@ -1,7 +1,8 @@
-import React, { useState, useRef } from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useState, useRef, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { addItem } from '../../features/cartSlice';
-import productsData from '../../assets/data/home/products.json';
+import { fetchProducts } from '../../auth/productsSlice';
+import seedProducts from '../../assets/data/home/products.json';
 import { Pagination, Navigation } from 'swiper/modules';
 import { FaPizzaSlice, FaHamburger, FaUtensils } from "react-icons/fa";
 import { RiArrowRightWideLine, RiArrowLeftWideLine } from "react-icons/ri";
@@ -16,6 +17,11 @@ const PopularCategories = () => {
     const dispatch = useDispatch();
     const swiperRef = useRef(null);
     const [activeCategory, setActiveCategory] = useState('pizzas');
+    const { list: products, loaded } = useSelector((state) => state.products);
+
+    useEffect(() => {
+        if (!loaded) dispatch(fetchProducts());
+    }, [dispatch, loaded]);
 
     const categories = [
         { id: 'pizzas', label: 'Pizzas', icon: <FaPizzaSlice size={30} /> },
@@ -46,7 +52,8 @@ const PopularCategories = () => {
         }
     };
 
-    const currentProducts = productsData.filter(item => item.category === activeCategory);
+    const sourceProducts = loaded && products.length === 0 ? seedProducts : products;
+    const currentProducts = sourceProducts.filter(item => item.category === activeCategory);
 
     const handleAddToCart = (product) => {
         dispatch(addItem(product));
