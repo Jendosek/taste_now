@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { ReactComponent as Logo } from '../../assets/img/header/icons/logo.svg'
-import { ReactComponent as Cart } from '../../assets/img/header/icons/cart.svg'
+import Logo from '../../assets/img/header/icons/logo.svg?react'
+import Cart from '../../assets/img/header/icons/cart.svg?react'
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../../auth/authSlice";
 import { clearCart } from "../../features/cartSlice";

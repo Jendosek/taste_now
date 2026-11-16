@@ -3,11 +3,11 @@ import { useDispatch } from 'react-redux';
 import { useNavigate, Link } from 'react-router-dom';
 import { login } from '../../auth/authSlice';
 import './authStyle.css';
-import { ReactComponent as Logo } from '../../assets/img/header/icons/logo.svg'
+import Logo from '../../assets/img/header/icons/logo.svg?react'
 import burgerBg from '../../assets/img/signUp/images/signup_burger.png';
-import { ReactComponent as GoogleIcon } from '../../assets/img/signUp/icons/google_icon.svg';
-import { ReactComponent as FacebookIcon } from '../../assets/img/signUp/icons/facebook_icon.svg';
-import { ReactComponent as LinkedinIcon } from '../../assets/img/signUp/icons/linkedin_icon.svg';
+import GoogleIcon from '../../assets/img/signUp/icons/google_icon.svg?react';
+import FacebookIcon from '../../assets/img/signUp/icons/facebook_icon.svg?react';
+import LinkedinIcon from '../../assets/img/signUp/icons/linkedin_icon.svg?react';
 import { auth, db } from '../../firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { doc, setDoc, collection, query, where, getDocs } from 'firebase/firestore';
