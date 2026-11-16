@@ -1,5 +1,3 @@
-import './App.css';
-import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 
@@ -15,7 +13,7 @@ import Profile from './screens/profile/Profile';
 import AdminRoute from './screens/admin/AdminRoute';
 import PrivacyPolicy from './screens/footerScreens/privacyPolicy/PrivacyPolicy';
 import TermsOfService from './screens/footerScreens/termsOfService/TermsOfService';
-import Help from './screens/footerScreens/help/Hepl';
+import Help from './screens/footerScreens/help/Help';
 
 import NotFound from './screens/notFound/NotFound'
 import useAuthListener from './hooks/useAuthListener';

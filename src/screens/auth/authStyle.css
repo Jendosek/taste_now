@@ -161,6 +161,15 @@ form {
     display: block;
 }
 
+.auth-notice {
+    background-color: #fff0f3;
+    color: #F72D57;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 14px;
+    margin: 0 0 20px;
+}
+
 @media (max-width: 768px) {
     .auth-page {
         flex-direction: column;

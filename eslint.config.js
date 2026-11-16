@@ -19,5 +19,9 @@ export default defineConfig([
         ecmaFeatures: { jsx: true },
       },
     },
+    rules: {
+      // `_name` marks an intentionally unused variable (e.g. omitting a key via rest).
+      'no-unused-vars': ['error', { varsIgnorePattern: '^_', ignoreRestSiblings: true }],
+    },
   },
 ]);

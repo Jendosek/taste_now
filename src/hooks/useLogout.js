@@ -2,8 +2,8 @@ import { useCallback } from 'react';
 import { useDispatch } from 'react-redux';
 import { signOut } from 'firebase/auth';
 import { auth } from '../firebase';
-import { logout } from '../auth/authSlice';
-import { clearCart } from '../features/cartSlice';
+import { logout } from '../store/slices/authSlice';
+import { clearCart } from '../store/slices/cartSlice';
 
 // Ends the Firebase session and resets user-specific client state.
 const useLogout = () => {

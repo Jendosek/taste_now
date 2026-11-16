@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import cardsData from '../../../../assets/data/contactUs/contactCards.json';
 import './style.css';

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useNavigate, Link } from 'react-router-dom';
-import { login } from '../../auth/authSlice';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
+import { login } from '../../store/slices/authSlice';
 import './authStyle.css';
 import logo from '../../assets/img/header/icons/logo.svg';
 import burgerBg from '../../assets/img/signUp/images/signup_burger.png';
@@ -12,6 +12,10 @@ import { loadUserProfile } from '../../utils/userProfile';
 const Login = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const location = useLocation();
+    // Set when another page sends the user here (e.g. checkout without login).
+    const notice = location.state?.message;
+    const redirectTo = location.state?.from || '/';
 
     const [formData, setFormData] = useState({
         email: '',
@@ -51,15 +55,13 @@ const Login = () => {
                 username: profile.username || "User"
             }));
 
-            navigate('/');
+            navigate(redirectTo, { replace: true });
 
         } catch (error) {
-            console.error("Login error:", error);
-
             if (error.code === 'auth/invalid-credential' || error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password') {
                 setErrors({ email: "Invalid email or password" });
             } else {
-                alert("Login failed: " + error.message);
+                setErrors({ form: "Login failed. Please try again later." });
             }
         } finally {
             setIsLoading(false);
@@ -74,23 +76,26 @@ const Login = () => {
                 <h1 className="auth-title">Login</h1>
                 <p className="auth-subtitle">Sign in with your account</p>
 
+                {notice && <p className="auth-notice">{notice}</p>}
+
                 <form onSubmit={handleLogin}>
                     <div>
                         <input
                             type="email" name="email" placeholder="Email"
                             className={`auth-input ${errors.email ? 'error' : ''}`}
-                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                            onChange={handleChange}
                         />
-                        {errors.email && <span className="error-text" style={{ color: '#F72D57', fontSize: '12px', marginTop: '-15px', marginBottom: '15px', display: 'block' }}>{errors.email}</span>}
+                        {errors.email && <span className="error-text-reg">{errors.email}</span>}
                     </div>
                     <div>
                         <input
                             type="password" name="password" placeholder="Password"
                             className={`auth-input ${errors.password ? 'error' : ''}`}
-                            onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+                            onChange={handleChange}
                         />
-                        {errors.password && <span className="error-text" style={{ color: '#F72D57', fontSize: '12px', marginTop: '-15px', marginBottom: '15px', display: 'block' }}>{errors.password}</span>}
+                        {errors.password && <span className="error-text-reg">{errors.password}</span>}
                     </div>
+                    {errors.form && <span className="error-text-reg">{errors.form}</span>}
                     <button type="submit" className="btn-auth" disabled={isLoading}>
                         {isLoading ? 'Logging in...' : 'Login'}
                     </button>

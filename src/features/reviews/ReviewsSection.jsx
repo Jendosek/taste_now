@@ -1,8 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchReviews, addReview } from '../reviewSlice';
+import { fetchReviews, addReview } from '../../store/slices/reviewSlice';
 import { FaStar } from 'react-icons/fa';
 import './style.css';
+
+const StarRating = ({ value, onChange }) => (
+    <div className="star-rating-input">
+        {[...Array(5)].map((_, index) => {
+            const ratingValue = index + 1;
+            return (
+                <label key={index}>
+                    <input
+                        type="radio"
+                        name="rating"
+                        value={ratingValue}
+                        checked={value === ratingValue}
+                        onChange={() => onChange(ratingValue)}
+                    />
+                    <FaStar
+                        className="star"
+                        color={ratingValue <= value ? "#ffc107" : "#e4e5e9"}
+                        size={25}
+                    />
+                </label>
+            );
+        })}
+    </div>
+);
 
 const ReviewsSection = () => {
     const dispatch = useDispatch();
@@ -26,31 +50,6 @@ const ReviewsSection = () => {
         }
     };
 
-    const StarRating = () => {
-        return (
-            <div className="star-rating-input">
-                {[...Array(5)].map((star, index) => {
-                    const ratingValue = index + 1;
-                    return (
-                        <label key={index}>
-                            <input 
-                                type="radio" 
-                                name="rating" 
-                                value={ratingValue} 
-                                onClick={() => setFormData({...formData, rating: ratingValue})}
-                            />
-                            <FaStar 
-                                className="star" 
-                                color={ratingValue <= formData.rating ? "#ffc107" : "#e4e5e9"} 
-                                size={25}
-                            />
-                        </label>
-                    );
-                })}
-            </div>
-        );
-    };
-
     return (
         <section className="reviews-section">
             <h2 className="reviews-title">What our customers <span className="highlight">say</span></h2>
@@ -69,7 +68,10 @@ const ReviewsSection = () => {
                         />
                         <div className="rating-wrapper">
                             <span>Rating:</span>
-                            <StarRating />
+                            <StarRating
+                                value={formData.rating}
+                                onChange={(rating) => setFormData({ ...formData, rating })}
+                            />
                         </div>
                     </div>
                     <textarea 

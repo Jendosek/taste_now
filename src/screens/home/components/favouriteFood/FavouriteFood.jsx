@@ -1,4 +1,3 @@
-import React from 'react';
 import './style.css';
 import burgerImage from "../../../../assets/img/home/images/burger_recommendation.png";
 

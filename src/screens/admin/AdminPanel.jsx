@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
     fetchProducts,
@@ -6,7 +6,7 @@ import {
     updateProduct,
     deleteProduct,
     seedProductsFromCatalog,
-} from '../../auth/productsSlice';
+} from '../../store/slices/productsSlice';
 import ProductForm from './ProductForm';
 import './style.css';
 

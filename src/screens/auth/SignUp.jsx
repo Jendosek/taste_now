@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate, Link } from 'react-router-dom';
-import { login } from '../../auth/authSlice';
+import { login } from '../../store/slices/authSlice';
 import './authStyle.css';
 import Logo from '../../assets/img/header/icons/logo.svg?react'
 import burgerBg from '../../assets/img/signUp/images/signup_burger.png';
@@ -96,7 +96,7 @@ const SignUp = () => {
                 await user.delete().catch(() => {});
                 setErrors(batchError.code === 'permission-denied'
                     ? { username: "This username is already taken" }
-                    : { email: "Could not create your account. Please try again." });
+                    : { form: "Could not create your account. Please try again." });
                 return;
             }
 
@@ -112,12 +112,10 @@ const SignUp = () => {
             navigate('/');
 
         } catch (error) {
-            console.error("Error signing up:", error);
-
             if (error.code === 'auth/email-already-in-use') {
                 setErrors({ email: "This email is already in use" });
             } else {
-                alert("Something went wrong: " + error.message);
+                setErrors({ form: "Something went wrong. Please try again later." });
             }
         } finally {
             setIsLoading(false);
@@ -174,6 +172,7 @@ const SignUp = () => {
                         />
                         {errors.confirmPassword && <span className="error-text-reg">{errors.confirmPassword}</span>}
                     </div>
+                    {errors.form && <span className="error-text-reg">{errors.form}</span>}
                     <button type="submit" className="btn-auth" disabled={isLoading}>
                         {isLoading ? 'Loading...' : 'Sign up'}
                     </button>

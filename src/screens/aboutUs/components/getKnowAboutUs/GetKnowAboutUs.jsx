@@ -1,4 +1,3 @@
-import React from "react";
 import './style.css';
 import getKnowImg1 from '../../../../assets/img/aboutUs/images/about_us1.png';
 import getKnowImg2 from '../../../../assets/img/aboutUs/images/about_us2.png';

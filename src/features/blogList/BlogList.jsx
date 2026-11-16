@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiSearch, FiFilter } from "react-icons/fi";
 import blogData from '../../assets/data/blog/blog.json';

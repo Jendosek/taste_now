@@ -1,4 +1,3 @@
-import React from "react";
 import PopularCategories from "../../features/popularCategories/PopularCategories";
 import Hero from "./components/hero/Hero";
 import FavouriteFood from "./components/favouriteFood/FavouriteFood";

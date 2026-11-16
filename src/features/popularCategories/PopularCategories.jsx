@@ -1,7 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addItem } from '../../features/cartSlice';
-import { fetchProducts } from '../../auth/productsSlice';
+import { fetchProducts } from '../../store/slices/productsSlice';
 import seedProducts from '../../assets/data/home/products.json';
 import { Pagination, Navigation } from 'swiper/modules';
 import { FaPizzaSlice, FaHamburger, FaUtensils } from "react-icons/fa";
@@ -54,10 +53,6 @@ const PopularCategories = () => {
 
     const sourceProducts = loaded && products.length === 0 ? seedProducts : products;
     const currentProducts = sourceProducts.filter(item => item.category === activeCategory);
-
-    const handleAddToCart = (product) => {
-        dispatch(addItem(product));
-    };
 
     return (
         <div className="popular-categories-section">

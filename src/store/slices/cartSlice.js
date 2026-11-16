@@ -1,11 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const savedCart = localStorage.getItem('cart');
-
 // Keeps money values at cent precision (avoids 11.990000001-style drift).
 const roundPrice = (value) => Math.round(value * 100) / 100;
 
-const initialState = savedCart ? JSON.parse(savedCart) : {
+const initialState = {
   items: [],
   totalQuantity: 0,
   totalPrice: 0,
@@ -46,8 +44,6 @@ const cartSlice = createSlice({
         existingItem.quantity++;
         existingItem.totalPrice = roundPrice(existingItem.totalPrice + newItem.price);
       }
-      
-      localStorage.setItem('cart', JSON.stringify(state));
     },
 
     removeItem(state, action) {
@@ -65,21 +61,19 @@ const cartSlice = createSlice({
           existingItem.totalPrice = roundPrice(existingItem.totalPrice - existingItem.price);
         }
       }
-      localStorage.setItem('cart', JSON.stringify(state));
     },
 
     clearCart(state) {
       state.items = [];
       state.totalQuantity = 0;
       state.totalPrice = 0;
-      localStorage.setItem('cart', JSON.stringify(state));
     },
 
-    setCart: (state, action) => {
-            state.items = action.payload.items;
-            state.totalQuantity = action.payload.totalQuantity;
-            state.totalPrice = action.payload.totalPrice;
-        },
+    setCart(state, action) {
+      state.items = action.payload.items;
+      state.totalQuantity = action.payload.totalQuantity;
+      state.totalPrice = action.payload.totalPrice;
+    },
   },
 });
 

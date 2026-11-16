@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useStore } from 'react-redux';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../firebase';
-import { login, logout } from '../auth/authSlice';
+import { login, logout } from '../store/slices/authSlice';
 import { loadUserProfile } from '../utils/userProfile';
 
 // Keeps the Redux auth state in sync with the real Firebase session

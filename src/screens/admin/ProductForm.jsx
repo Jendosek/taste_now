@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const SAVE_ERROR = 'Could not save the product. Make sure your account has admin rights in Firestore.';
 

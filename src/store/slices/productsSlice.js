@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { db } from '../firebase';
+import { db } from '../../firebase';
 import {
     collection,
     addDoc,
@@ -9,7 +9,7 @@ import {
     doc,
     writeBatch,
 } from 'firebase/firestore';
-import seedProducts from '../assets/data/home/products.json';
+import seedProducts from '../../assets/data/home/products.json';
 
 export const fetchProducts = createAsyncThunk(
     'products/fetchProducts',

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { addItem, removeItem, clearCart } from '../../features/cartSlice';
-import { createOrder } from '../../auth/orderSlice';
+import { addItem, removeItem, clearCart } from '../../store/slices/cartSlice';
+import { createOrder } from '../../store/slices/orderSlice';
 
 import './style.css';
 
@@ -31,8 +31,9 @@ const Cart = () => {
 
     const handleCheckout = async () => {
         if (!user) {
-            alert("Please login to place an order");
-            navigate('/login');
+            navigate('/login', {
+                state: { from: '/cart', message: 'Please log in to place your order.' },
+            });
             return;
         }
 

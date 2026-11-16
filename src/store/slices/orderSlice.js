@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { db } from '../firebase';
-import { collection, addDoc, query, where, getDocs, orderBy } from 'firebase/firestore';
+import { db } from '../../firebase';
+import { collection, addDoc, query, where, getDocs } from 'firebase/firestore';
 
 export const createOrder = createAsyncThunk(
     'orders/createOrder',

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FaUser, FaPhoneAlt, FaEnvelope, FaCommentDots } from 'react-icons/fa';
 import CustomAlert from './CustomAlert';
 import './style.css';
