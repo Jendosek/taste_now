@@ -5,9 +5,9 @@ import { login } from '../../auth/authSlice';
 import './authStyle.css';
 import logo from '../../assets/img/header/icons/logo.svg';
 import burgerBg from '../../assets/img/signUp/images/signup_burger.png';
-import { auth, db } from '../../firebase';
+import { auth } from '../../firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { doc, getDoc } from 'firebase/firestore';
+import { loadUserProfile } from '../../utils/userProfile';
 
 const Login = () => {
     const dispatch = useDispatch();
@@ -44,20 +44,11 @@ const Login = () => {
 
         try {
             const userCredential = await signInWithEmailAndPassword(auth, formData.email, formData.password);
-            const user = userCredential.user;
-
-            const docRef = doc(db, "users", user.uid);
-            const docSnap = await getDoc(docRef);
-
-            let username = "User";
-            if (docSnap.exists()) {
-                username = docSnap.data().username;
-            }
+            const profile = await loadUserProfile(userCredential.user);
 
             dispatch(login({
-                uid: user.uid,
-                email: user.email,
-                username: username
+                ...profile,
+                username: profile.username || "User"
             }));
 
             navigate('/');

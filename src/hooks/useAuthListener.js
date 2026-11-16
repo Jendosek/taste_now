@@ -1,38 +1,30 @@
 import { useEffect } from 'react';
 import { useDispatch, useStore } from 'react-redux';
 import { onAuthStateChanged } from 'firebase/auth';
-import { doc, getDoc } from 'firebase/firestore';
-import { auth, db } from '../firebase';
+import { auth } from '../firebase';
 import { login, logout } from '../auth/authSlice';
+import { loadUserProfile } from '../utils/userProfile';
 
 // Keeps the Redux auth state in sync with the real Firebase session
-// (expired session, sign-out in another tab, stale localStorage data).
+// (expired session, sign-out in another tab, stale localStorage data)
+// and refreshes the profile (username, admin flag) on every app load.
 const useAuthListener = () => {
     const dispatch = useDispatch();
     const store = useStore();
 
     useEffect(() => {
-        const currentUid = () => store.getState().auth.user?.uid;
-
         const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
             if (!firebaseUser) {
-                if (currentUid()) dispatch(logout());
+                if (store.getState().auth.user) dispatch(logout());
                 return;
             }
 
-            if (currentUid() === firebaseUser.uid) return;
-
             try {
-                const snap = await getDoc(doc(db, 'users', firebaseUser.uid));
+                const profile = await loadUserProfile(firebaseUser);
                 // During sign-up the profile doc is written after the auth user
-                // is created; SignUp/Login dispatch login themselves in that case.
-                if (!snap.exists() || currentUid() === firebaseUser.uid) return;
-
-                dispatch(login({
-                    uid: firebaseUser.uid,
-                    email: firebaseUser.email,
-                    username: snap.data().username,
-                }));
+                // is created; SignUp dispatches login itself in that case.
+                if (!profile.username) return;
+                dispatch(login(profile));
             } catch {
                 // Profile could not be loaded; keep the current state.
             }

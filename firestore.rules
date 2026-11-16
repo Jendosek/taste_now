@@ -1,0 +1,108 @@
+rules_version = '2';
+
+// Security rules for the TasteNow Firestore database.
+// The frontend only hides admin UI; these rules are what actually protect the data.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+
+    // Admins are listed in /admins/{uid}; these docs are created manually in the Firebase Console.
+    function isAdmin() {
+      return isSignedIn()
+        && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    function isNonEmptyString(value, maxLength) {
+      return value is string && value.size() > 0 && value.size() <= maxLength;
+    }
+
+    // ---------- Admins (read-only from the app) ----------
+    match /admins/{uid} {
+      allow get: if isOwner(uid);
+      allow list, write: if false;
+    }
+
+    // ---------- Menu ----------
+    match /products/{productId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // ---------- User profiles ----------
+    match /users/{uid} {
+      allow get: if isOwner(uid);
+      allow create: if isOwner(uid)
+        && request.resource.data.keys().hasOnly(['uid', 'username', 'email', 'createdAt'])
+        && request.resource.data.uid == uid
+        && isNonEmptyString(request.resource.data.username, 20)
+        && request.resource.data.email == request.auth.token.email;
+      allow list, update, delete: if false;
+    }
+
+    // ---------- Username reservations (doc id = lowercased username) ----------
+    // Public `get` lets sign-up check availability without exposing user profiles.
+    // `create` only succeeds if the name is free (an existing doc would make it an update).
+    match /usernames/{username} {
+      allow get: if true;
+      allow create: if isSignedIn()
+        && request.resource.data.keys().hasOnly(['uid'])
+        && request.resource.data.uid == request.auth.uid
+        && username.matches('^[a-z0-9_.-]{3,20}$');
+      allow list, update, delete: if false;
+    }
+
+    // ---------- Saved carts ----------
+    match /carts/{uid} {
+      allow read: if isOwner(uid);
+      allow write: if isOwner(uid)
+        && request.resource.data.keys().hasOnly(['items', 'totalQuantity', 'totalPrice'])
+        && request.resource.data.items is list
+        && request.resource.data.items.size() <= 100
+        && request.resource.data.totalQuantity is number
+        && request.resource.data.totalPrice is number;
+    }
+
+    // ---------- Orders ----------
+    match /orders/{orderId} {
+      // Queries must filter by userId == current uid (Profile does).
+      allow read: if isSignedIn()
+        && (resource.data.userId == request.auth.uid || isAdmin());
+      allow create: if isSignedIn()
+        && request.resource.data.keys().hasOnly(['userId', 'items', 'totalAmount', 'date', 'status'])
+        && request.resource.data.userId == request.auth.uid
+        && request.resource.data.items is list
+        && request.resource.data.items.size() > 0
+        && request.resource.data.items.size() <= 100
+        && request.resource.data.totalAmount is number
+        && request.resource.data.totalAmount >= 0
+        && request.resource.data.date is string
+        && request.resource.data.status == 'Successful';
+      allow update, delete: if isAdmin();
+    }
+
+    // ---------- Reviews (guests can post, content is validated) ----------
+    match /reviews/{reviewId} {
+      allow read: if true;
+      allow create: if request.resource.data.keys().hasOnly(['name', 'comment', 'rating', 'createdAt'])
+        && isNonEmptyString(request.resource.data.name, 50)
+        && isNonEmptyString(request.resource.data.comment, 1000)
+        && request.resource.data.rating is int
+        && request.resource.data.rating >= 1
+        && request.resource.data.rating <= 5
+        && request.resource.data.createdAt is string;
+      allow update, delete: if isAdmin();
+    }
+
+    // Everything else is closed.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

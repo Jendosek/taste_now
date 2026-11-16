@@ -18,6 +18,8 @@ const CATEGORIES = [
     { id: 'combos', label: 'Combos' },
 ];
 
+const ACTION_ERROR = 'Action failed. Make sure your account has admin rights in Firestore.';
+
 const AdminPanel = () => {
     const dispatch = useDispatch();
     const { list, isLoading, loaded } = useSelector((state) => state.products);
@@ -27,6 +29,7 @@ const AdminPanel = () => {
     const [editingProduct, setEditingProduct] = useState(null);
     const [confirmDelete, setConfirmDelete] = useState(null);
     const [seeding, setSeeding] = useState(false);
+    const [actionError, setActionError] = useState(null);
 
     useEffect(() => {
         if (!loaded) dispatch(fetchProducts());
@@ -47,11 +50,12 @@ const AdminPanel = () => {
         setShowForm(true);
     };
 
+    // Errors are re-thrown so ProductForm can show them inside the modal.
     const handleSubmit = async (data) => {
         if (editingProduct) {
-            await dispatch(updateProduct({ id: editingProduct.id, data }));
+            await dispatch(updateProduct({ id: editingProduct.id, data })).unwrap();
         } else {
-            await dispatch(createProduct(data));
+            await dispatch(createProduct(data)).unwrap();
         }
         setShowForm(false);
         setEditingProduct(null);
@@ -59,13 +63,23 @@ const AdminPanel = () => {
 
     const handleDelete = async () => {
         if (!confirmDelete) return;
-        await dispatch(deleteProduct(confirmDelete.id));
+        setActionError(null);
+        try {
+            await dispatch(deleteProduct(confirmDelete.id)).unwrap();
+        } catch {
+            setActionError(ACTION_ERROR);
+        }
         setConfirmDelete(null);
     };
 
     const handleSeed = async () => {
         setSeeding(true);
-        await dispatch(seedProductsFromCatalog());
+        setActionError(null);
+        try {
+            await dispatch(seedProductsFromCatalog()).unwrap();
+        } catch {
+            setActionError(ACTION_ERROR);
+        }
         setSeeding(false);
     };
 
@@ -94,6 +108,8 @@ const AdminPanel = () => {
                     </button>
                 ))}
             </div>
+
+            {actionError && <p className="admin-error">{actionError}</p>}
 
             {isLoading && <p className="admin-empty">Loading products...</p>}
 

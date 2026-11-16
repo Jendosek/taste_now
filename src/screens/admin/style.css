@@ -414,3 +414,13 @@
         grid-template-columns: 1fr 100px auto;
     }
 }
+
+.admin-error {
+    background: #fdecea;
+    color: #c62828;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 20px;
+}

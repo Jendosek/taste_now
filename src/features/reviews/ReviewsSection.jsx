@@ -61,7 +61,8 @@ const ReviewsSection = () => {
                     <div className="form-row">
                         <input 
                             type="text" 
-                            placeholder="Your Name" 
+                            placeholder="Your Name"
+                            maxLength={50}
                             value={formData.name}
                             onChange={(e) => setFormData({...formData, name: e.target.value})}
                             required
@@ -72,7 +73,8 @@ const ReviewsSection = () => {
                         </div>
                     </div>
                     <textarea 
-                        placeholder="Share your experience..." 
+                        placeholder="Share your experience..."
+                        maxLength={1000}
                         value={formData.comment}
                         onChange={(e) => setFormData({...formData, comment: e.target.value})}
                         required

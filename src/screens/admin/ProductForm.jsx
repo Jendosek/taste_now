@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+const SAVE_ERROR = 'Could not save the product. Make sure your account has admin rights in Firestore.';
+
 const EMPTY = {
     category: 'pizzas',
     title: '',
@@ -28,6 +30,7 @@ const ProductForm = ({ initial, onSubmit, onCancel }) => {
     );
     const [errors, setErrors] = useState({});
     const [submitting, setSubmitting] = useState(false);
+    const [submitError, setSubmitError] = useState(null);
 
     const setField = (name, value) => setForm((f) => ({ ...f, [name]: value }));
 
@@ -89,8 +92,11 @@ const ProductForm = ({ initial, onSubmit, onCancel }) => {
         };
 
         setSubmitting(true);
+        setSubmitError(null);
         try {
             await onSubmit(data);
+        } catch {
+            setSubmitError(SAVE_ERROR);
         } finally {
             setSubmitting(false);
         }
@@ -238,6 +244,8 @@ const ProductForm = ({ initial, onSubmit, onCancel }) => {
                             </div>
                         ))}
                     </div>
+
+                    {submitError && <p className="admin-error">{submitError}</p>}
 
                     <div className="admin-modal-actions">
                         <button

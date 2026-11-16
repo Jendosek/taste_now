@@ -10,7 +10,10 @@ import FacebookIcon from '../../assets/img/signUp/icons/facebook_icon.svg?react'
 import LinkedinIcon from '../../assets/img/signUp/icons/linkedin_icon.svg?react';
 import { auth, db } from '../../firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { doc, setDoc, collection, query, where, getDocs } from 'firebase/firestore';
+import { doc, getDoc, writeBatch } from 'firebase/firestore';
+
+// Must match the /usernames rule in firestore.rules.
+const USERNAME_REGEX = /^[A-Za-z0-9_.-]{3,20}$/;
 
 const SignUp = () => {
     const dispatch = useDispatch();
@@ -38,7 +41,12 @@ const SignUp = () => {
         setIsLoading(true);
         const newErrors = {};
 
-        if (!formData.username.trim()) newErrors.username = "Username is required";
+        const username = formData.username.trim();
+        if (!username) {
+            newErrors.username = "Username is required";
+        } else if (!USERNAME_REGEX.test(username)) {
+            newErrors.username = "3-20 characters: letters, numbers, . _ -";
+        }
 
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(formData.email)) {
@@ -60,11 +68,10 @@ const SignUp = () => {
         }
 
         try {
-            const usersRef = collection(db, "users");
-            const q = query(usersRef, where("username", "==", formData.username));
-            const querySnapshot = await getDocs(q);
+            const usernameRef = doc(db, "usernames", username.toLowerCase());
+            const usernameSnap = await getDoc(usernameRef);
 
-            if (!querySnapshot.empty) {
+            if (usernameSnap.exists()) {
                 setErrors({ username: "This username is already taken" });
                 setIsLoading(false);
                 return;
@@ -73,17 +80,31 @@ const SignUp = () => {
             const userCredential = await createUserWithEmailAndPassword(auth, formData.email, formData.password);
             const user = userCredential.user;
 
-            await setDoc(doc(db, "users", user.uid), {
-                uid: user.uid,
-                username: formData.username,
-                email: formData.email,
-                createdAt: new Date().toISOString()
-            });
+            // Profile + username reservation are written atomically.
+            // If the name was taken in the meantime, the rules reject the batch.
+            try {
+                const batch = writeBatch(db);
+                batch.set(doc(db, "users", user.uid), {
+                    uid: user.uid,
+                    username,
+                    email: user.email,
+                    createdAt: new Date().toISOString()
+                });
+                batch.set(usernameRef, { uid: user.uid });
+                await batch.commit();
+            } catch (batchError) {
+                await user.delete().catch(() => {});
+                setErrors(batchError.code === 'permission-denied'
+                    ? { username: "This username is already taken" }
+                    : { email: "Could not create your account. Please try again." });
+                return;
+            }
 
             const serializableUser = {
                 uid: user.uid,
                 email: user.email,
-                username: formData.username
+                username,
+                isAdmin: false
             };
 
             dispatch(login(serializableUser));
