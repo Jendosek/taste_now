@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import useLogout from '../../hooks/useLogout';
 import { isAdmin } from '../../utils/isAdmin';
 import './style.css';
+import PageTitle from '../../components/pageTitle/PageTitle';
 
 const Profile = () => {
     const { user } = useSelector((state) => state.auth);
@@ -27,6 +28,7 @@ const Profile = () => {
     if (!user) {
         return (
             <div className="profile-container">
+                <PageTitle title="My profile" />
                 Please <Link to="/login">log in</Link> to see your profile.
             </div>
         );
@@ -34,6 +36,7 @@ const Profile = () => {
 
     return (
         <div className="profile-page">
+            <PageTitle title="My profile" />
             <div className="profile-sidebar">
                 <div className="avatar-circle">
                     {user.username.charAt(0).toUpperCase()}

@@ -5,6 +5,7 @@ import { addItem, removeItem, clearCart } from '../../store/slices/cartSlice';
 import { createOrder } from '../../store/slices/orderSlice';
 
 import './style.css';
+import PageTitle from '../../components/pageTitle/PageTitle';
 
 const Cart = () => {
     const { items, totalPrice } = useSelector((state) => state.cart);
@@ -59,6 +60,7 @@ const Cart = () => {
     if (items.length === 0) {
         return (
             <div className="cart-empty">
+                <PageTitle title="Cart" />
                 <h2>Your Cart is empty</h2>
                 <p>Looks like you haven't added any delicious food yet.</p>
                 <Link to="/" className="btn-back">
@@ -70,6 +72,7 @@ const Cart = () => {
 
     return (
         <div className="cart-page">
+            <PageTitle title="Cart" />
             <div className="cart-header">
                 <h1>My Cart</h1>
                 <Link to="/" className="continue-shopping">

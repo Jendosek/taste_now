@@ -1,10 +1,12 @@
 import './style.css';
 import { Link } from 'react-router-dom';
 import { FaParachuteBox, FaRegCreditCard, FaUser } from "react-icons/fa";
+import PageTitle from '../../../components/pageTitle/PageTitle';
 
 const Help = () => {
     return (
         <div className="help-page">
+            <PageTitle title="Help" />
             <div className="help-container">
                 <h1 className="help-title">How can we <span className="highlight">help?</span></h1>
                 <p className="help-subtitle">Find answers to frequently asked questions below.</p>

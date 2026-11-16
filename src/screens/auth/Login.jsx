@@ -8,6 +8,7 @@ import burgerBg from '../../assets/img/signUp/images/signup_burger.webp';
 import { auth } from '../../firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { loadUserProfile } from '../../utils/userProfile';
+import PageTitle from '../../components/pageTitle/PageTitle';
 
 const Login = () => {
     const dispatch = useDispatch();
@@ -70,6 +71,7 @@ const Login = () => {
 
     return (
         <div className="auth-page">
+            <PageTitle title="Login" />
             <div className="auth-left">
                 <img src={logo} alt="Logo" className="auth-logo" />
 

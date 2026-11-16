@@ -11,6 +11,7 @@ import linkedinIcon from '../../assets/img/signUp/icons/linkedin_icon.webp';
 import { auth, db } from '../../firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { doc, getDoc, writeBatch } from 'firebase/firestore';
+import PageTitle from '../../components/pageTitle/PageTitle';
 
 // Must match the /usernames rule in firestore.rules.
 const USERNAME_REGEX = /^[A-Za-z0-9_.-]{3,20}$/;
@@ -124,6 +125,7 @@ const SignUp = () => {
 
     return (
         <div className="auth-page">
+            <PageTitle title="Sign up" />
             <div className="auth-left">
                 <Logo className="auth-logo" />
 

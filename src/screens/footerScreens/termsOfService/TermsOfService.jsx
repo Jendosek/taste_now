@@ -1,8 +1,10 @@
 import './style.css';
+import PageTitle from '../../../components/pageTitle/PageTitle';
 
 const TermsOfService = () => {
     return (
         <div className="terms-page">
+            <PageTitle title="Terms of service" />
             <div className="terms-container">
                 <h1 className="terms-title">Terms of <span className="highlight">Service</span></h1>
                 <p className="last-updated">Last updated: December 8, 2025</p>

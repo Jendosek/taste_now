@@ -1,8 +1,10 @@
 import './style.css';
+import PageTitle from '../../../components/pageTitle/PageTitle';
 
 const PrivacyPolicy = () => {
     return (
         <div className="policy-page">
+            <PageTitle title="Privacy policy" />
             <div className="policy-container">
                 <h1 className="policy-title">Privacy <span className="highlight">Policy</span></h1>
                 <p className="last-updated">Last updated: December 8, 2025</p>

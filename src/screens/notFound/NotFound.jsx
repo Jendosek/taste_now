@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
 import './style.css';
+import PageTitle from '../../components/pageTitle/PageTitle';
 
 const NotFound = () => {
     return (
         <div className="not-found-container">
+            <PageTitle title="Page not found" noIndex />
             <div className="error-code">404</div>
             <h1 className="error-title">Oops! Page not found</h1>
             <p className="error-text">
