@@ -1,5 +1,5 @@
 import './style.css';
-import heroImage from '../../../../assets/img/contactUs/images/contactUs_hero.png';
+import heroImage from '../../../../assets/img/contactUs/images/contactUs_hero.webp';
 
 const Hero = () => {
     return (
@@ -16,7 +16,7 @@ const Hero = () => {
             </div>
 
             <div className="hero-image-contact">
-                <img src={heroImage} alt="Contact Us Hero" />
+                <img src={heroImage} alt="Contact Us Hero" width="576" height="465" fetchPriority="high" />
             </div>
         </section>
     );

@@ -69,7 +69,7 @@ const BlogList = () => {
                                 </Link>
                             </div>
                             <div className="blog-image">
-                                <img src={blog.image} alt={blog.title} />
+                                <img src={blog.image} alt={blog.title} loading="lazy" />
                             </div>
                         </div>
                     ))

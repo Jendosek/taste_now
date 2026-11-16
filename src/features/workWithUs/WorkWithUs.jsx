@@ -44,7 +44,7 @@ const WorkWithUs = () => {
                         <SwiperSlide key={item.id}>
                             <Link to={item.link} className="work-card">
                                 <div className="work-image">
-                                    <img src={item.image} alt={item.title} />
+                                    <img src={item.image} alt={item.title} loading="lazy" />
                                 </div>
                                 <div className="work-info">
                                     <p>{item.title}</p>

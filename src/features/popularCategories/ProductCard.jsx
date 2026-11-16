@@ -38,7 +38,7 @@ const ProductCard = ({ product }) => {
                 className="product-image" 
                 onClick={() => setIsExpanded(!isExpanded)}
                 style={{ cursor: 'pointer' }}>
-                <img src={product.imageUrl} alt={product.title} />
+                <img src={product.imageUrl} alt={product.title} loading="lazy" />
                 {product.rating && <span className="rating">★ {product.rating}</span>}
             </div>
             

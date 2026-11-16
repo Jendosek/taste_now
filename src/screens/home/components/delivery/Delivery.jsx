@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import './style.css';
-import bagImage from "../../../../assets/img/home/images/food_delivery.png";
+import bagImage from "../../../../assets/img/home/images/food_delivery.webp";
 
 const DeliverySection = () => {
     return (
@@ -20,7 +20,7 @@ const DeliverySection = () => {
             </div>
 
             <div className="delivery-image">
-                <img src={bagImage} alt="Taste Now Delivery Bag" />
+                <img src={bagImage} alt="Taste Now Delivery Bag" loading="lazy" />
             </div>
 
         </div>

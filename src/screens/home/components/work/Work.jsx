@@ -6,7 +6,7 @@ const Work = () => {
     return (
         <div className="work-container">
             <div className="img-container">
-                <img src={bagImage} alt="Work Delivery" />
+                <img src={bagImage} alt="Work Delivery" loading="lazy" />
             </div>
             <div className="work-text">
                 <h2>Work <span className="highlight">whenever</span> you want, <span className="highlight">wherever</span> you are</h2>

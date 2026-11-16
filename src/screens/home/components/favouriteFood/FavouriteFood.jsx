@@ -1,5 +1,5 @@
 import './style.css';
-import burgerImage from "../../../../assets/img/home/images/burger_recommendation.png";
+import burgerImage from "../../../../assets/img/home/images/burger_recommendation.webp";
 
 const FavouriteFood = () => {
     return (
@@ -7,7 +7,7 @@ const FavouriteFood = () => {
             <div className="favourite-container">
                 
                 <div className="favourite-image">
-                    <img src={burgerImage} alt="Delicious Burger" />
+                    <img src={burgerImage} alt="Delicious Burger" loading="lazy" />
                 </div>
 
                 <div className="favourite-text">

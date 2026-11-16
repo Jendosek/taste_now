@@ -137,6 +137,7 @@ const AdminPanel = () => {
                                     src={product.imageUrl}
                                     alt={product.title}
                                     className="admin-product-image"
+                                    loading="lazy"
                                     onError={(e) => {
                                         e.currentTarget.style.opacity = '0.2';
                                     }}

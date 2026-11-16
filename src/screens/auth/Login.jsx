@@ -4,7 +4,7 @@ import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { login } from '../../store/slices/authSlice';
 import './authStyle.css';
 import logo from '../../assets/img/header/icons/logo.svg';
-import burgerBg from '../../assets/img/signUp/images/signup_burger.png';
+import burgerBg from '../../assets/img/signUp/images/signup_burger.webp';
 import { auth } from '../../firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { loadUserProfile } from '../../utils/userProfile';

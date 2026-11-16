@@ -4,10 +4,10 @@ import { useNavigate, Link } from 'react-router-dom';
 import { login } from '../../store/slices/authSlice';
 import './authStyle.css';
 import Logo from '../../assets/img/header/icons/logo.svg?react'
-import burgerBg from '../../assets/img/signUp/images/signup_burger.png';
-import GoogleIcon from '../../assets/img/signUp/icons/google_icon.svg?react';
-import FacebookIcon from '../../assets/img/signUp/icons/facebook_icon.svg?react';
-import LinkedinIcon from '../../assets/img/signUp/icons/linkedin_icon.svg?react';
+import burgerBg from '../../assets/img/signUp/images/signup_burger.webp';
+import googleIcon from '../../assets/img/signUp/icons/google_icon.webp';
+import facebookIcon from '../../assets/img/signUp/icons/facebook_icon.webp';
+import linkedinIcon from '../../assets/img/signUp/icons/linkedin_icon.webp';
 import { auth, db } from '../../firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { doc, getDoc, writeBatch } from 'firebase/firestore';
@@ -132,9 +132,9 @@ const SignUp = () => {
                 <p className="auth-subtitle">Signup using social networks</p>
 
                 <div className="social-icons">
-                    <div className="social-icon" title="Google sign-up: coming soon"><GoogleIcon className='social-icon-svg' /></div>
-                    <div className="social-icon" title="Facebook sign-up: coming soon"><FacebookIcon className='social-icon-svg' /></div>
-                    <div className="social-icon" title="LinkedIn sign-up: coming soon"><LinkedinIcon className='social-icon-svg' /></div>
+                    <div className="social-icon" title="Google sign-up: coming soon"><img src={googleIcon} alt="Google" className='social-icon-svg' width="37" height="37" /></div>
+                    <div className="social-icon" title="Facebook sign-up: coming soon"><img src={facebookIcon} alt="Facebook" className='social-icon-svg' width="37" height="37" /></div>
+                    <div className="social-icon" title="LinkedIn sign-up: coming soon"><img src={linkedinIcon} alt="LinkedIn" className='social-icon-svg' width="37" height="37" /></div>
                 </div>
 
                 <div className="divider"><span>OR</span></div>

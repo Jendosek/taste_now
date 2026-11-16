@@ -1,14 +1,14 @@
 import './style.css';
-import getKnowImg1 from '../../../../assets/img/aboutUs/images/about_us1.png';
-import getKnowImg2 from '../../../../assets/img/aboutUs/images/about_us2.png';
-import getKnowImg3 from '../../../../assets/img/aboutUs/images/about_us3.png';
+import getKnowImg1 from '../../../../assets/img/aboutUs/images/about_us1.webp';
+import getKnowImg2 from '../../../../assets/img/aboutUs/images/about_us2.webp';
+import getKnowImg3 from '../../../../assets/img/aboutUs/images/about_us3.webp';
 
 const GetKnowAboutUs = () => {
     return (
         <section className="getKnowAboutUs-section">
             <h2 className="getKnowAboutUs-title">Get to know <span className="highlight">us</span></h2>
             <div className="teamwork-container">
-                <img src={getKnowImg1} alt="get to know us 1" />
+                <img src={getKnowImg1} alt="get to know us 1" loading="lazy" />
                 <div className="teamwork-container-text">
                     <h2><span className="highlight">Teamwork</span> is the key to our success</h2>
                     <p>At TasteNow we make sure that every 
@@ -24,10 +24,10 @@ const GetKnowAboutUs = () => {
                         from the app to an organization that takes care of our environment. 
                         We believe that with everyone´s help, we can make a better world. </p>
                 </div>
-                <img src={getKnowImg2} alt="get to know us 2" />
+                <img src={getKnowImg2} alt="get to know us 2" loading="lazy" />
             </div>
             <div className="employees-container">
-                <img src={getKnowImg3} alt="get to know us 3" />
+                <img src={getKnowImg3} alt="get to know us 3" loading="lazy" />
                 <div className="employees-container-text">
                     <h2>Our employees define who we are</h2>
                     <p>We are proud to have a team of professionals 
