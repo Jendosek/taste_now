@@ -2,6 +2,9 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const savedCart = localStorage.getItem('cart');
 
+// Keeps money values at cent precision (avoids 11.990000001-style drift).
+const roundPrice = (value) => Math.round(value * 100) / 100;
+
 const initialState = savedCart ? JSON.parse(savedCart) : {
   items: [],
   totalQuantity: 0,
@@ -24,7 +27,7 @@ const cartSlice = createSlice({
       const existingItem = state.items.find((item) => item.cartId === uniqueCartId);
 
       state.totalQuantity++;
-      state.totalPrice += newItem.price;
+      state.totalPrice = roundPrice(state.totalPrice + newItem.price);
 
       if (!existingItem) {
         state.items.push({
@@ -41,7 +44,7 @@ const cartSlice = createSlice({
         });
       } else {
         existingItem.quantity++;
-        existingItem.totalPrice += newItem.price;
+        existingItem.totalPrice = roundPrice(existingItem.totalPrice + newItem.price);
       }
       
       localStorage.setItem('cart', JSON.stringify(state));
@@ -53,13 +56,13 @@ const cartSlice = createSlice({
 
       if (existingItem) {
         state.totalQuantity--;
-        state.totalPrice -= existingItem.price;
+        state.totalPrice = roundPrice(state.totalPrice - existingItem.price);
 
         if (existingItem.quantity === 1) {
           state.items = state.items.filter((item) => item.cartId !== cartId);
         } else {
           existingItem.quantity--;
-          existingItem.totalPrice -= existingItem.price;
+          existingItem.totalPrice = roundPrice(existingItem.totalPrice - existingItem.price);
         }
       }
       localStorage.setItem('cart', JSON.stringify(state));

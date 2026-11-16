@@ -42,7 +42,7 @@
 .social-icon-svg {
     width: 37px;
     height: 37px;
-    cursor: pointer;
+    cursor: help;
     transition: transform 0.2s;
 }
 

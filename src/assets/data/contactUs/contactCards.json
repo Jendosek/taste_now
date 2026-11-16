@@ -4,6 +4,7 @@
     "title": "Press",
     "description": "Are you interested in our latest news or working on a TasteNow story and need to get in touch?",
     "buttonText": "Visit Press Page",
+    "buttonLink": "/blog",
     "extraText": "Submit a request" 
   },
   {
@@ -11,6 +12,7 @@
     "title": "Help & Support",
     "description": "Our support team is spread across the globe to give you answers fast. Ask about anything, at anytime and we’ll be there for you.",
     "buttonText": "Visit Support Page",
+    "buttonLink": "/help",
     "extraText": "Submit a request"
   },
   {
@@ -18,6 +20,7 @@
     "title": "Sales",
     "description": "Get in touch with our sales team to see how we can work together. TasteNow is always searching for great candidates to become a part of our family, contact us!",
     "buttonText": "Contact Sales",
+    "buttonLink": "#contact-form",
     "extraText": "Submit a request"
   }
 ]

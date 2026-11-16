@@ -181,13 +181,20 @@
     transition: all 0.3s ease;
 }
 
-.link-checkout {
-    text-decoration: none;
-    color: #fff
+.btn-checkout:hover:not(:disabled) {
+    background-color: #d11a40;
 }
 
-.btn-checkout:hover {
-    background-color: #d11a40;
+.btn-checkout:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.checkout-error {
+    color: #F72D57;
+    font-size: 14px;
+    margin: 10px 0 0;
+    text-align: center;
 }
 
 .cart-empty {

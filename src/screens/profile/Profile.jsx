@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchOrders } from '../../auth/orderSlice';
-import { logout } from '../../auth/authSlice';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import useLogout from '../../hooks/useLogout';
 import { isAdmin } from '../../utils/isAdmin';
 import './style.css';
 
@@ -11,6 +11,7 @@ const Profile = () => {
     const { list: orders, isLoading } = useSelector((state) => state.orders);
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const logoutUser = useLogout();
 
     useEffect(() => {
         if (user?.uid) {
@@ -18,13 +19,18 @@ const Profile = () => {
         }
     }, [dispatch, user]);
 
-    const handleLogout = () => {
-        dispatch(logout());
+    const handleLogout = async () => {
+        await logoutUser();
         navigate('/');
-        // navigate('/login');
     };
 
-    if (!user) return <div className="profile-container">Please log in</div>;
+    if (!user) {
+        return (
+            <div className="profile-container">
+                Please <Link to="/login">log in</Link> to see your profile.
+            </div>
+        );
+    }
 
     return (
         <div className="profile-page">
@@ -54,7 +60,7 @@ const Profile = () => {
                             <div key={order.id} className="order-card">
                                 <div className="order-header">
                                     <span className="order-date">{new Date(order.date).toLocaleDateString()}</span>
-                                    <span className="order-status">Successful</span>
+                                    <span className="order-status">{order.status || 'Successful'}</span>
                                 </div>
                                 <div className="order-items">
                                     {order.items.map(item => (
@@ -71,7 +77,7 @@ const Profile = () => {
                                                     </div>
                                                 )}
                                             </div>
-                                            <span>${item.price}</span>
+                                            <span>${Number(item.price).toFixed(2)}</span>
                                         </div>
                                     ))}
                                 </div>

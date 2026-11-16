@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { addItem, removeItem, clearCart } from '../../features/cartSlice';
@@ -13,6 +13,9 @@ const Cart = () => {
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
+
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [checkoutError, setCheckoutError] = useState(null);
 
     const handleAdd = (item) => {
         dispatch(addItem(item));
@@ -33,14 +36,23 @@ const Cart = () => {
             return;
         }
 
-        await dispatch(createOrder({
-            userId: user.uid,
-            items: items,
-            totalAmount: totalPrice
-        }));
+        setIsSubmitting(true);
+        setCheckoutError(null);
 
-        dispatch(clearCart());
-        navigate('/success');
+        try {
+            await dispatch(createOrder({
+                userId: user.uid,
+                items: items,
+                totalAmount: totalPrice
+            })).unwrap();
+
+            dispatch(clearCart());
+            navigate('/success');
+        } catch {
+            setCheckoutError('Could not place your order. Please try again.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     if (items.length === 0) {
@@ -125,11 +137,16 @@ const Cart = () => {
                         <span>${totalPrice.toFixed(2)}</span>
                     </div>
 
-                    <button onClick={handleCheckout} className="btn-checkout">
-                        <Link to="/success" className='link-checkout'>
-                            Checkout
-                        </Link>
+                    <button
+                        onClick={handleCheckout}
+                        className="btn-checkout"
+                        disabled={isSubmitting}>
+                        {isSubmitting ? 'Placing order...' : 'Checkout'}
                     </button>
+
+                    {checkoutError && (
+                        <p className="checkout-error">{checkoutError}</p>
+                    )}
 
 
                     <button className="btn-clear" onClick={handleClearCart}>

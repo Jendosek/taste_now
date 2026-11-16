@@ -113,9 +113,9 @@ const SignUp = () => {
                 <p className="auth-subtitle">Signup using social networks</p>
 
                 <div className="social-icons">
-                    <div className="social-icon"><GoogleIcon className='social-icon-svg' /></div>
-                    <div className="social-icon"><FacebookIcon className='social-icon-svg' /></div>
-                    <div className="social-icon"><LinkedinIcon className='social-icon-svg' /></div>
+                    <div className="social-icon" title="Google sign-up: coming soon"><GoogleIcon className='social-icon-svg' /></div>
+                    <div className="social-icon" title="Facebook sign-up: coming soon"><FacebookIcon className='social-icon-svg' /></div>
+                    <div className="social-icon" title="LinkedIn sign-up: coming soon"><LinkedinIcon className='social-icon-svg' /></div>
                 </div>
 
                 <div className="divider"><span>OR</span></div>

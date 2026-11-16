@@ -12,7 +12,7 @@ const Hero = () => {
                 Discover new blogs every week, and share your knowledge with the community.
                 Be a part of our everyday blogs within the TasteNow community.
             </p>
-            <Link to="/*" className='btn-blog'>
+            <Link to="/signup" className='btn-blog'>
                 Create a blog
             </Link>
         </section>

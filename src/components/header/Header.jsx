@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Logo from '../../assets/img/header/icons/logo.svg?react'
 import Cart from '../../assets/img/header/icons/cart.svg?react'
-import { useSelector, useDispatch } from "react-redux";
-import { logout } from "../../auth/authSlice";
-import { clearCart } from "../../features/cartSlice";
+import { useSelector } from "react-redux";
+import useLogout from "../../hooks/useLogout";
 import { FaUser, FaSignOutAlt, FaBars, FaTimes } from "react-icons/fa";
 import useResponsive from "../../hooks/useResponsive";
 import { useNavigate } from 'react-router-dom';
@@ -12,7 +11,7 @@ import './style.css'
 
 const Header = () => {
     const { user, isAuthenticated } = useSelector((state) => state.auth);
-    const dispatch = useDispatch();
+    const logoutUser = useLogout();
 
     const [isProfileOpen, setIsProfileOpen] = useState(false);
     const navigate = useNavigate();
@@ -32,11 +31,9 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const handleLogout = () => {
-        dispatch(clearCart());
-        dispatch(logout());
         setIsProfileOpen(false);
         setIsMenuOpen(false);
-        // navigate('/login');
+        logoutUser();
     };
 
     const closeMenu = () => {

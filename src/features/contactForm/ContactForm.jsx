@@ -48,7 +48,7 @@ const ContactForm = () => {
     };
 
     return (
-        <section className="contact-form-section">
+        <section className="contact-form-section" id="contact-form">
             {showAlert && (
                 <CustomAlert
                     message="Your message has been sent successfully!"

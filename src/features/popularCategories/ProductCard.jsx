@@ -19,7 +19,7 @@ const ProductCard = ({ product }) => {
 
     const handleAddToCart = () => {
         const toppingsPrice = selectedToppings.reduce((sum, t) => sum + t.price, 0);
-        const finalPrice = product.price + toppingsPrice;
+        const finalPrice = Math.round((product.price + toppingsPrice) * 100) / 100;
 
         const productToAdd = {
             ...product,

@@ -18,9 +18,12 @@ import TermsOfService from './screens/footerScreens/termsOfService/TermsOfServic
 import Help from './screens/footerScreens/help/Hepl';
 
 import NotFound from './screens/notFound/NotFound'
+import useAuthListener from './hooks/useAuthListener';
 
 
 function App() {
+  useAuthListener();
+
   return (
     <div>
       <Routes>

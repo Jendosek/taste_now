@@ -83,8 +83,6 @@ const Login = () => {
                 <h1 className="auth-title">Login</h1>
                 <p className="auth-subtitle">Sign in with your account</p>
 
-                <div className="divider"><span>OR</span></div>
-
                 <form onSubmit={handleLogin}>
                     <div>
                         <input
