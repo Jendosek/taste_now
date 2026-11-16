@@ -1,8 +1,18 @@
 {
   "name": "taste_now",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "description": "Responsive food delivery web app built from a Figma UI kit with React 19, Vite, Redux Toolkit and Firebase.",
+  "homepage": "https://taste-now-kappa.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jendosek/taste_now.git"
+  },
+  "license": "MIT",
   "type": "module",
+  "engines": {
+    "node": ">=20.19"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",

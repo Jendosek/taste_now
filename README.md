@@ -7,6 +7,7 @@ with a working cart, user accounts, order history and an admin panel powered by 
 
 **[Live demo](https://taste-now-kappa.vercel.app)** · **[Figma design](https://www.figma.com/design/1hgPWOgSgkNTbOwHM7Ej2i/TasteNow---Food-Delivery-Web-and-Mobile-App---UI-Kit--Community-)**
 
+[![CI](https://github.com/Jendosek/taste_now/actions/workflows/ci.yml/badge.svg)](https://github.com/Jendosek/taste_now/actions/workflows/ci.yml)
 ![React](https://img.shields.io/badge/React-19-20232A?logo=react&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)
 ![Redux Toolkit](https://img.shields.io/badge/Redux_Toolkit-2-764ABC?logo=redux&logoColor=white)
